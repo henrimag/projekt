@@ -16,10 +16,10 @@
         </h1>
 
         <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-            <label>E-mail (kasutajatunnus):</label><br>
+            <label>E-mail (kasutajatunnus):</label><br><br>
             <input type="email" name="email" placeholder="type your email here.."><br>
 
-            <label>Salasõna:</label><br>
+            <label>Salasõna:</label><br><br>
             <input name="password" type="password" placeholder="password"><br>
 
 
