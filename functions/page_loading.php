@@ -17,11 +17,12 @@ function display_head($title, $description) {
 //menu stuff
 function display_menu($is_main = false) {
   $pages = [
-    ['main', '' ],
-    ['test', 'test']
+    ['main | ', '' ],
+    ['test | ', 'test'],
+    ['logIn', 'logIn.php']
   ];
 
-  echo '<div id="menu">';
+  echo '<div id="menu" class="menu">';
   echo '<p>Time Sort</p>';
   echo '<nav>';
 
