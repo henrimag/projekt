@@ -15,13 +15,43 @@ function display_head($title, $description) {
 }
 
 //menu stuff
-function display_menu($is_main = false) {
+function display_teacher_menu($is_main = false) {
   $pages = [
     ['main | ', '' ],
-    ['test | ', 'test'],
     ['logIn | ', 'logIn.php'],
-    ['timer | ', 'timer.html'],
-	['kodutöö', 'homework.php']
+    ['Muuda profiili | ', 'teacher_profile.php'],
+    ['kodutöö', 'homework.php']
+  ];
+
+  echo '<div id="menu" class="menu">';
+  echo '<p>Time Sort</p>';
+  echo '<nav>';
+
+  for ($i = 0; $i < count($pages); $i++) {
+    echo '<a href="';
+    if ($is_main) {
+      echo './';
+    }
+    else {
+      echo '../';
+    }
+    echo $pages[$i][1];
+    echo '">';
+    echo $pages[$i][0];
+    echo '</a>';
+  }
+  
+  echo '</nav>';  
+  echo '</div>';
+}
+
+function display_student_menu($is_main = false) {
+  $pages = [
+    ['main | ', '' ],
+    ['logIn | ', 'logIn.php'],
+    ['Muuda profiili | ', 'student_profile.php'],
+    ['Salvesta aega | ', 'timer.php'],
+ 
   ];
 
   echo '<div id="menu" class="menu">';
