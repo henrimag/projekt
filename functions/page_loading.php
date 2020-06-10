@@ -17,7 +17,7 @@ function display_head($title, $description) {
 //menu stuff
 function display_teacher_menu($is_main = false) {
   $pages = [
-    ['main | ', '' ],
+    ['main | ', 'teacher.php' ],
     ['Logi sisse | ', 'logIn.php'],
     ['Muuda profiili | ', 'teacher_profile.php'],
     ['Lisa kodutöö | ', 'homework.php']
@@ -47,7 +47,7 @@ function display_teacher_menu($is_main = false) {
 
 function display_student_menu($is_main = false) {
   $pages = [
-    ['main | ', '' ],
+    ['main | ', 'student.php' ],
     ['Logi sisse | ', 'logIn.php'],
     ['Muuda profiili | ', 'student_profile.php'],
     ['Salvesta aega | ', 'timer.php']
