@@ -58,11 +58,11 @@
 	$toScript .= "\t" .'<script>tinymce.init({selector:"textarea#homeworkEditor", plugins: "link", menubar: "edit",});</script>' ."\n";
 
   ?>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="../style/style.css">
+	<?php display_teacher_menu(true); ?>
+  <hr>
 
-  <p>See leht on loodud koolis õppetöö raames ja ei sisalda tõsiseltvõetavat sisu!</p>
-  <hr>
-  <p> Tagasi <a href="index.php">pealehele</a></p>
-  <hr>
 <h2>Lisa kodutöö</h2>
 	<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 		<label>Kodutöö pealkiri:</label><br><input type="text" name="homeworkTitle" id="homeworkTitle" style="width: 100%;" value="<?php echo $homeworkTitle; ?>"><br>
