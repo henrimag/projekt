@@ -1,0 +1,19 @@
+body {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+.stopwatch {
+    font-size: 3cm;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.timerButtons {
+    top: 10cm;
+    cursor: pointer;
+}

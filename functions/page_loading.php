@@ -19,7 +19,8 @@ function display_menu($is_main = false) {
   $pages = [
     ['main | ', '' ],
     ['test | ', 'test'],
-    ['logIn', 'logIn.php']
+    ['logIn | ', 'logIn.php'],
+    ['timer', 'timer.html']
   ];
 
   echo '<div id="menu" class="menu">';
