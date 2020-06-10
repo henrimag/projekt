@@ -8,7 +8,14 @@ html {
 .logInForm {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  background-color: gray;
+  font-size: 1.5em;
+  text-align: center;
   align-items: center;
   font-style: monospace;
   font-style: bold;
@@ -16,13 +23,9 @@ html {
   color: rgb(79, 173, 54);
 }
 
-.menu {
-    background-color: gray;
-    font-size: 1.5em;
-    text-align: center;
-}
 input[type="button"],
 input[type="submit"] {
   cursor: pointer;
 }
+
 
