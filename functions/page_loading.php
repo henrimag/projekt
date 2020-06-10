@@ -9,7 +9,7 @@ function display_head($title, $description) {
 
   //general stuff
   echo '<meta charset="UTF-8">';
-  echo '<meta http-equiv="refresh" content="30">';
+  echo '<meta http-equiv="refresh" content="300">';
 
   echo '</head>';
 }
@@ -18,9 +18,9 @@ function display_head($title, $description) {
 function display_teacher_menu($is_main = false) {
   $pages = [
     ['main | ', '' ],
-    ['logIn | ', 'logIn.php'],
+    ['Logi sisse | ', 'logIn.php'],
     ['Muuda profiili | ', 'teacher_profile.php'],
-    ['kodutöö | ', 'homework.php']
+    ['Lisa kodutöö | ', 'homework.php']
   ];
 
   echo '<div id="menu" class="menu">';
@@ -48,10 +48,9 @@ function display_teacher_menu($is_main = false) {
 function display_student_menu($is_main = false) {
   $pages = [
     ['main | ', '' ],
-    ['logIn | ', 'logIn.php'],
+    ['Logi sisse | ', 'logIn.php'],
     ['Muuda profiili | ', 'student_profile.php'],
-    ['Salvesta aega | ', 'timer.php'],
-	['kodutöö | ', 'homework.php']
+    ['Salvesta aega | ', 'timer.php']
  
   ];
 

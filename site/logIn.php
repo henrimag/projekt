@@ -17,11 +17,11 @@
         </h1>
 
         <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-            <label>E-mail (kasutajatunnus):</label><br>
-            <input type="email" name="email" placeholder="type your email here.."><br><br>
+            <label>E-mail:</label><br>
+            <input type="email" name="email" placeholder="Sisesta E-mail"><br><br>
 
             <label>Salasõna:</label><br>
-            <input name="password" type="password" placeholder="password"><br><br>
+            <input name="password" type="password" placeholder="Sisesta salasõna"><br><br>
 
 
             <input name="login" type="button" value="Logi sisse õpilasena" onclick="window.location.href = 'student.php';">
