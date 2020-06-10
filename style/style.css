@@ -10,6 +10,10 @@ html {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  font-style: monospace;
+  font-style: bold;
+  font-size: large;
+  color: rgb(79, 173, 54);
 }
 
 .menu {
