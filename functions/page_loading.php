@@ -20,7 +20,7 @@ function display_menu($is_main = false) {
     ['main | ', '' ],
     ['test | ', 'test'],
     ['logIn | ', 'logIn.php'],
-    ['timer', 'timer.html'],
+    ['timer | ', 'timer.html'],
 	['kodutöö', 'homework.php']
   ];
 
