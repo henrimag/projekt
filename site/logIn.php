@@ -1,4 +1,5 @@
 <?php require('../functions/page_loading.php'); ?>
+<?php display_head("Sisse logimise leht", "See on saidi sisselogimise leht"); ?>
 
 <!DOCTYPE html>
 <html>
@@ -6,7 +7,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 <link rel="stylesheet" href="../style/style.css">
 
-<?php display_head("Sisse logimise leht", "See on saidi sisselogimise leht"); ?>
+
 
 <body>
 
@@ -16,14 +17,15 @@
         </h1>
 
         <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-            <label>E-mail (kasutajatunnus):</label><br><br>
-            <input type="email" name="email" placeholder="type your email here.."><br>
+            <label>E-mail (kasutajatunnus):</label><br>
+            <input type="email" name="email" placeholder="type your email here.."><br><br>
 
-            <label>Salasõna:</label><br><br>
-            <input name="password" type="password" placeholder="password"><br>
+            <label>Salasõna:</label><br>
+            <input name="password" type="password" placeholder="password"><br><br>
 
 
-            <input name="login" type="button" value="Logi sisse" onclick="window.location.href = 'index.php';">
+            <input name="login" type="button" value="Logi sisse õpilasena" onclick="window.location.href = 'student.php';">
+            <input name="login" type="button" value="Logi sisse õppejõuna" onclick="window.location.href = 'teacher.php';">
             <hr>
         </form>
         <hr>
