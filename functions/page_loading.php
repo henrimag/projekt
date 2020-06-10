@@ -20,11 +20,11 @@ function display_teacher_menu($is_main = false) {
     ['main | ', '' ],
     ['logIn | ', 'logIn.php'],
     ['Muuda profiili | ', 'teacher_profile.php'],
-    ['kodutöö', 'homework.php']
+    ['kodutöö | ', 'homework.php']
   ];
 
   echo '<div id="menu" class="menu">';
-  echo '<p>Time Sort</p>';
+  echo '<p>TimeSort</p>';
   echo '<nav>';
 
   for ($i = 0; $i < count($pages); $i++) {
@@ -51,11 +51,12 @@ function display_student_menu($is_main = false) {
     ['logIn | ', 'logIn.php'],
     ['Muuda profiili | ', 'student_profile.php'],
     ['Salvesta aega | ', 'timer.php'],
+	['kodutöö | ', 'homework.php']
  
   ];
 
   echo '<div id="menu" class="menu">';
-  echo '<p>Time Sort</p>';
+  echo '<p>TimeSort</p>';
   echo '<nav>';
 
   for ($i = 0; $i < count($pages); $i++) {

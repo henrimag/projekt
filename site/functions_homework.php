@@ -1,7 +1,6 @@
 <?php 
 	function saveHomework($homeworkTitle, $homework, $expiredate){
 		$response = 0;
-		//echo "SALVESTATAKSE UUDIST!";
 		$conn = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
 		
 		$stmt = $conn->prepare("INSERT INTO vpuudis (userid, title, content, expire) VALUES (?, ?, ?, ?)");
@@ -36,7 +35,6 @@ function latestHomework($limit){
 		$homeworkHTML .= "<div> \n";
 		$homeworkHTML .= "\t <h3>" .$titleFromDb ."</h3> \n";
 		$addedTime = new DateTime($addedFromDb);
-		//$homeworkHTML .= "\t <p>(Lisatud: " .$addedFromDb .")</p> \n";
 		$homeworkHTML .= "\t <p>(Lisatud: " .$addedTime->format("d.m.Y H:i:s") .")</p> \n";
 		$homeworkHTML .= "\t <div>" .htmlspecialchars_decode($contentFromDb) ."</div> \n";
 		$homeworkHTML .= "</div> \n";
