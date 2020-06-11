@@ -65,13 +65,13 @@
 
 <h2>Lisa kodutöö</h2>
 	<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-		<label>Kodutöö pealkiri:</label><br><input type="text" name="homeworkTitle" id="homeworkTitle" style="width: 100%;" value="<?php echo $homeworkTitle; ?>"><br>
+		<label>Kodutöö pealkiri:</label><br><input type="text" name="homeworkTitle" id="homeworkTitle" placeholder="Sisesta kodutöö pealkiri" style="width: 23%;" value="<?php echo $homeworkTitle; ?>"><br>
 		<label>Kodutöö sisu:</label><br>
-		<textarea name="homeworkEditor" id="homeworkEditor"><?php echo $homework; ?></textarea>
+		<textarea name="homeworkEditor" id="homeworkEditor" style="width: 23%; height: 200px;" placeholder="Sisesta kodutöö"><?php echo $homework; ?></textarea>
 		<br>
 		<label>Kodutöö nähtav kuni (kaasaarvatud)</label>
 		<input type="date" name="expiredate" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" value="<?php echo $expiredate; ?>">
 		
-		<input name="homeworkBtn" id="homeworkBtn" type="submit" value="Salvesta kodutöö!"> <span>&nbsp;</span><span><?php echo $error; ?></span>
+		<input name="homeworkBtn" id="homeworkBtn" type="submit" value="Salvesta kodutöö"> <span>&nbsp;</span><span><?php echo $error; ?></span>
 	</form>
 </html>

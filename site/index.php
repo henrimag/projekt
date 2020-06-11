@@ -1,4 +1,4 @@
-<?php require('../functions/page_loading.php'); ?>
+<?php require("../functions/page_loading.php"); ?>
 
 <!DOCTYPE html>
 <html>
@@ -12,8 +12,9 @@
 
 <body>
   
-  <?php display_menu(true); ?>
-
+  <?php display_teacher_menu(true); ?>
+  <?php display_student_menu(true); ?>
+  
 </body>
 
 </html>
