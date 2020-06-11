@@ -1,4 +1,5 @@
 <?php require('../functions/page_loading.php');
+require("../functions/student_entry.php");
 require("../config.php");
 display_student_menu(true);
 
