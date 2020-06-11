@@ -53,6 +53,8 @@ input[type="submit"] {
   align-items: center;
   margin: 8px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  padding: 1cm;
 }
+
