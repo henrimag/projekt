@@ -2,6 +2,8 @@
 //käivitame sessiooni
 session_start();
 
+$Timestamp = date('Y-m-d H:i:s');
+
 function saveResult($Activity_Activity_ID, $Time_Spent, $Timestamp){
     $notice = null;
     $conn = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);

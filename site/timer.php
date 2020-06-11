@@ -1,12 +1,12 @@
 <?php require('../functions/page_loading.php');
-require("../functions/student_entry.php");
-require("../config.php");
+require('../functions/student_entry.php');
+require('../config.php');
 display_student_menu(true);
+
 
 $notice = null;
 $Activity_Activity_ID = null;
 $Time_Spent = null;
-$Timestamp = date('Y-m-d H:i:s');
 $Activity_Activity_ID_Error = null;
 $Time_Spent_Error = null;
 
@@ -28,8 +28,30 @@ $Time_Spent_Error = null;
     }
 
   
-    
+   /* switch($_POST['homework[]']){
+        case '1':
+            $Activity_Activity_ID = 1;
+        break;
+        case '2':
+            $Activity_Activity_ID = 2;
+        break;
+        case '3':
+            $Activity_Activity_ID = 3;
+        break;
+        default:
+           echo "ei ole valitud tegevust";
+        }*/
+
+       
 }
+
+
+if (isset($_POST['allsubjects[]']) === 'TP') {
+    echo "Tarkvaraarenduse projekt";
+     }
+     elseif (isset( $_POST['allsubjects[]']) === 'OOP' ) {
+         echo "OOP";
+     }
 ?>
 
 
@@ -50,7 +72,7 @@ $Time_Spent_Error = null;
     <div class="chooseSubject">
 
         <label class="subjectLabel" for='allSubjects[]'>Õppeaine: </label><br>
-        <select multiple="multiple" name="allSubjects[]">
+        <select name="allSubjects[]">
             <option value="TP">Tarkvaraarenduse projekt</option>
             <option value="OOP">Objektorienteeritud programmeerimine</option>
             <option value="ITD">Interaktsioonidisain</option>
@@ -60,9 +82,10 @@ $Time_Spent_Error = null;
             <option value="SI">Sissejuhatus infosüsteemidesse</option>
         </select>
         <br>
+        <span><?php echo $Time_Spent_Error ." " .$Activity_Activity_ID_Error; ?></span>
         <br>
         <label for='homework[]'>Õpitegevus: </label><br>
-        <select multiple="multiple" name="homework[]">
+        <select name="homework[]">
             <option value="1">Akadeemiline õppetöö</option>
             <option value="2">Rühmatöö</option>
             <option value="3">Harjutamine</option>
@@ -85,6 +108,7 @@ $Time_Spent_Error = null;
         <div name="stopwatch" id="stopwatch" class="stopwatch">00:00:00</div>
         <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             <input name="submitTime" id="submitTime" type="submit" value="Salvesta tulemus"><span id="notice"><?php echo $notice; ?></span>
+           
             <input type="hidden" value= "0" name="timeValue" class="timeValue">
         </form>
     </div>
