@@ -57,9 +57,7 @@
 	$toScript = "\t" .'<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>' ."\n";
 	$toScript .= "\t" .'<script>tinymce.init({selector:"textarea#homeworkEditor", plugins: "link", menubar: "edit",});</script>' ."\n";
 
-  ?>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="../style/style.css">
+  ?>	
 	<?php display_teacher_menu(true); ?>
   <hr>
 

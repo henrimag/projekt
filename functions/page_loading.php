@@ -11,61 +11,40 @@ function display_head($title, $description) {
   echo '<meta charset="UTF-8">';
   echo '<meta http-equiv="refresh" content="300">';
 
+  echo '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />';
+	echo '<link rel="stylesheet" href="../style/style.css">';
+
   echo '</head>';
 }
 
 //menu stuff
-function display_teacher_menu($is_main = false) {
+function display_teacher_menu() {
   $pages = [
-    ['Avaleht | ', 'teacher.php' ],
-    ['Logi sisse | ', 'logIn.php'],
-    ['Muuda profiili | ', 'teacher_profile.php'],
-    ['Lisa kodutöö | ', 'homework.php']
+    ['Avaleht', 'teacher.php' ],
+    ['Logi sisse', 'logIn.php'],
+    ['Muuda profiili', 'teacher_profile.php'],
+    ['Lisa kodutöö', 'homework.php']
   ];
-
-  echo '<div id="menu" class="menu">';
-  echo '<p>TimeSort</p>';
-  echo '<nav>';
-
-  for ($i = 0; $i < count($pages); $i++) {
-    echo '<a href="';
-    if ($is_main) {
-      echo './';
-    }
-    else {
-      echo '../';
-    }
-    echo $pages[$i][1];
-    echo '">';
-    echo $pages[$i][0];
-    echo '</a>';
-  }
-  
-  echo '</nav>';  
-  echo '</div>';
+  display_menu($pages);
 }
 
-function display_student_menu($is_main = false) {
+function display_student_menu() {
   $pages = [
-    ['Avaleht | ', 'student.php' ],
-    ['Logi sisse | ', 'logIn.php'],
-    ['Muuda profiili | ', 'student_profile.php'],
-    ['Salvesta aega | ', 'timer.php']
- 
+    ['Avaleht', 'student.php' ],
+    ['Logi sisse', 'logIn.php'],
+    ['Muuda profiili', 'student_profile.php'],
+    ['Salvesta aega', 'timer.php'] 
   ];
+  display_menu($pages);
+}
 
+function display_menu($pages) {
   echo '<div id="menu" class="menu">';
   echo '<p>TimeSort</p>';
   echo '<nav>';
 
   for ($i = 0; $i < count($pages); $i++) {
-    echo '<a href="';
-    if ($is_main) {
-      echo './';
-    }
-    else {
-      echo '../';
-    }
+    echo '<a href="./';
     echo $pages[$i][1];
     echo '">';
     echo $pages[$i][0];

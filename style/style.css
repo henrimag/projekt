@@ -12,6 +12,11 @@ html {
   justify-content: center;
 }
 
+input[type="button"],
+input[type="submit"] {
+  cursor: pointer;
+}
+
 .menu {
   background-color: gray;
   font-size: 1.5em;
@@ -20,12 +25,25 @@ html {
   font-style: monospace;
   font-style: bold;
   font-size: large;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.menu p {
   color: rgb(79, 173, 54);
+  font-size: 2em;
+  margin: 0 0 1em 0;
 }
 
-input[type="button"],
-input[type="submit"] {
-  cursor: pointer;
+nav a {  
+  font-size: 1.5em;
+  color: whitesmoke;
 }
 
+nav a:not(:first-child):before {
+  content: "|";
+}
 
+nav a, nav a:not(:first-child):before {
+  margin-right: 1em;
+}
