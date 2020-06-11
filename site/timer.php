@@ -1,6 +1,7 @@
 <?php require('../functions/page_loading.php');
+require("../config.php");
 display_student_menu(true);
-$database = "if19_TimeSort";
+
 $notice = null;
 $Activity_Activity_ID = null;
 $Time_Spent = null;
@@ -19,12 +20,13 @@ $Time_Spent_Error = null;
 	}
 
 	//ajakulu
-	if (isset($_POST["Time_Spent"]) and !empty($_POST["Time_Spent"])){
-		$Time_Spent = test_input($_POST["Time_Spent"]); 
+	if (isset($_POST["timeValue"]) and !empty($_POST["timeValue"])){
+		$Time_Spent = $_POST["timeValue"]; 
 	} else {
-		$Time_Spent_Error = "Ei saa salvestada null ajaga!";
+		echo $Time_Spent_Error = "Ei saa salvestada null ajaga!";
     }
 
+  
     
 }
 ?>
@@ -82,6 +84,7 @@ $Time_Spent_Error = null;
         <div name="stopwatch" id="stopwatch" class="stopwatch">00:00:00</div>
         <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             <input name="submitTime" id="submitTime" type="submit" value="Salvesta tulemus"><span id="notice"><?php echo $notice; ?></span>
+            <input type="hidden" value= "0" name="timeValue" class="timeValue">
         </form>
     </div>
 
