@@ -40,6 +40,39 @@
             <option value="8">Täpsustamata õpimeetod</option>
         </select>
         <br>
+		
+        <br>
+        <label for='hour[]'>Tunnid: </label><br>
+        <select multiple="multiple" name="hour[]">
+            <option value="1">1h</option>
+            <option value="2">2h</option>
+            <option value="3">3h</option>
+            <option value="4">4h</option>
+            <option value="5">5h</option>
+            <option value="6">6h</option>
+            <option value="7">7h</option>
+            <option value="8">8h</option>
+			<option value="8">9h</option>
+			<option value="8">10h</option>
+        </select>
+        <br>
+		
+        <br>
+        <label for='minute[]'>Minutid: </label><br>
+        <select multiple="multiple" name="minute[]">
+            <option value="1">5 min</option>
+            <option value="2">10 min</option>
+            <option value="3">15 min</option>
+            <option value="4">20 min</option>
+            <option value="5">25 min</option>
+            <option value="6">30 min</option>
+            <option value="7">35 min</option>
+            <option value="8">40 min</option>
+			<option value="8">45 min</option>
+			<option value="8">50 min</option>
+			<option value="8">55 min</option>
+        </select>
+        <br>
     </div>
     <div class="timerDiv">
         <div class="timerButtons">
