@@ -41,7 +41,6 @@
         </select>
         <br>
 		
-        <br>
         <label for='hour[]'>Tunnid: </label><br>
         <select multiple="multiple" name="hour[]">
             <option value="1">1h</option>
@@ -57,7 +56,6 @@
         </select>
         <br>
 		
-        <br>
         <label for='minute[]'>Minutid: </label><br>
         <select multiple="multiple" name="minute[]">
             <option value="1">5 min</option>
