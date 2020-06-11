@@ -6,9 +6,11 @@ html {
   }
   
 body {
-    
-    width: 100vw;
-    height: 100vh;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
 }
 
 .stopwatch {
@@ -17,10 +19,7 @@ body {
     font-weight: bold;
 }
 
-.timerButtons {
-    top: 10cm;
-    cursor: pointer;
-}
+
 
 input[type="button"],
 input[type="submit"] {
@@ -57,4 +56,5 @@ input[type="submit"] {
   justify-content: center;
   padding: 1cm;
 }
+
 

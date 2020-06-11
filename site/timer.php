@@ -16,7 +16,7 @@
 <body>
     <div class="chooseSubject">
 
-        <label class="subjectLabel" for='allSubjects[]'>Ainetüüp: </label><br>
+        <label class="subjectLabel" for='allSubjects[]'>Õppeaine: </label><br>
         <select multiple="multiple" name="allSubjects[]">
             <option value="TP">Tarkvaraarenduse projekt</option>
             <option value="OOP">Objektorienteeritud programmeerimine</option>
@@ -28,7 +28,7 @@
         </select>
         <br>
         <br>
-        <label for='homework[]'>Õppimise tüüp: </label><br>
+        <label for='homework[]'>Õpitegevus: </label><br>
         <select multiple="multiple" name="homework[]">
             <option value="1">Akadeemiline õppetöö</option>
             <option value="2">Rühmatöö</option>
@@ -56,3 +56,5 @@
 </body>
 
 </html>
+
+
