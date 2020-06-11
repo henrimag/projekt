@@ -1,5 +1,35 @@
-<?php require('../functions/page_loading.php'); ?>
-<?php display_student_menu(true); ?>
+<?php require('../functions/page_loading.php');
+display_student_menu(true);
+$database = "if19_TimeSort";
+$notice = null;
+$Activity_Activity_ID = null;
+$Time_Spent = null;
+$Timestamp = date('Y-m-d H:i:s');
+$Activity_Activity_ID_Error = null;
+$Time_Spent_Error = null;
+
+ //kui on salvestamise nuppu vajutatud
+
+  if(isset($_POST["submitTime"])){
+  
+    if(isset($_POST["Activity_Activity_ID"]) and !empty($_POST["Activity_Activity_ID"])){
+		$Activity_Activity_ID = intval($_POST["Activity_Activity_ID"]);
+	} else {
+		$Activity_Activity_ID_Error = "Palun vali õpitegevus!";
+	}
+
+	//ajakulu
+	if (isset($_POST["Time_Spent"]) and !empty($_POST["Time_Spent"])){
+		$Time_Spent = test_input($_POST["Time_Spent"]); 
+	} else {
+		$Time_Spent_Error = "Ei saa salvestada null ajaga!";
+    }
+
+    
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,37 +70,6 @@
             <option value="8">Täpsustamata õpimeetod</option>
         </select>
         <br>
-		
-        <label for='hour[]'>Tunnid: </label><br>
-        <select multiple="multiple" name="hour[]">
-            <option value="1">1h</option>
-            <option value="2">2h</option>
-            <option value="3">3h</option>
-            <option value="4">4h</option>
-            <option value="5">5h</option>
-            <option value="6">6h</option>
-            <option value="7">7h</option>
-            <option value="8">8h</option>
-			<option value="8">9h</option>
-			<option value="8">10h</option>
-        </select>
-        <br>
-		
-        <label for='minute[]'>Minutid: </label><br>
-        <select multiple="multiple" name="minute[]">
-            <option value="1">5 min</option>
-            <option value="2">10 min</option>
-            <option value="3">15 min</option>
-            <option value="4">20 min</option>
-            <option value="5">25 min</option>
-            <option value="6">30 min</option>
-            <option value="7">35 min</option>
-            <option value="8">40 min</option>
-			<option value="8">45 min</option>
-			<option value="8">50 min</option>
-			<option value="8">55 min</option>
-        </select>
-        <br>
     </div>
     <div class="timerDiv">
         <div class="timerButtons">
@@ -80,12 +79,13 @@
             <button class="timerButtons" onclick="stop()"><i class="fa fa-trash-o" aria-hidden="true"></i> Restart</button>
         </div>
 
-        <div class="stopwatch">00:00:00</div>
+        <div name="stopwatch" id="stopwatch" class="stopwatch">00:00:00</div>
+        <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+            <input name="submitTime" id="submitTime" type="submit" value="Salvesta tulemus"><span id="notice"><?php echo $notice; ?></span>
+        </form>
     </div>
 
 
 </body>
 
 </html>
-
-
