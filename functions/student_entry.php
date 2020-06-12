@@ -1,11 +1,11 @@
 <?php
 //käivitame sessiooni
-session_start();
+//session_start();
 
 $Timestamp = date('Y-m-d H:i:s');
 
 function saveResult($Activity_Activity_ID, $Time_Spent, $Timestamp){
-    $notice = null;
+	$notice = null;
     $conn = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
     $stmt = $conn->prepare("INSERT INTO Student_Entry (Activity_Activity_ID, Time_Spent, Timestamp) VALUES (?,?,?)");
     echo $conn->error;
@@ -18,6 +18,7 @@ function saveResult($Activity_Activity_ID, $Time_Spent, $Timestamp){
 
 	$stmt->close();
 	$conn->close();
+	var_dump($notice);
 	return $notice;
 }
 
