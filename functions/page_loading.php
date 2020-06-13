@@ -23,7 +23,8 @@ function display_teacher_menu() {
     ['Avaleht', 'teacher.php' ],
     ['Logi sisse', 'logIn.php'],
     ['Muuda profiili', 'teacher_profile.php'],
-    ['Lisa kodutöö', 'homework.php']
+    ['Lisa kodutöö', 'homework.php'],
+    ['Vaata statistikat', 'stats.php']
   ];
   display_menu($pages);
 }
@@ -33,7 +34,8 @@ function display_student_menu() {
     ['Avaleht', 'student.php' ],
     ['Logi sisse', 'logIn.php'],
     ['Muuda profiili', 'student_profile.php'],
-    ['Salvesta aega', 'timer.php'] 
+    ['Salvesta aega', 'timer.php'],
+    ['Vaata statistikat', 'stats.php']
   ];
   display_menu($pages);
 }
