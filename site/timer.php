@@ -3,7 +3,8 @@ require('../functions/student_entry.php');
 require('../config.php');
 display_student_menu(true);
 
-
+$database = "if19_TimeSort"; 
+$Timestamp = date('Y-m-d H:i:s');
 $notice = null;
 $Subject_Subject_ID = null;
 $Subject_Subject_ID_Error = null;
@@ -16,7 +17,7 @@ $Time_Spent_Error = null;
 //kui on salvestamise nuppu vajutatud
 //echo '<pre>';
 //var_dump($_POST);
-//var_dump($_POST["timeValue"]);
+//var_dump($_POST["submitTime"]);
 $timeStart = $_POST["timeValue"];
 //var_dump(round($timeStart * 1000));
 var_dump('Kulus' . (round(microtime(true) * 1000) - round($timeStart * 1000)) / 1000 . ' sekundit');
@@ -44,6 +45,8 @@ if (isset($_POST["submitTime"])) {
 
     saveResult($Activity_Activity_ID, $Time_Spent, $Timestamp, $Subject_Subject_ID);
     echo "Edukalt salvestatud";
+} else {
+    echo "Ei ole salvestatud ";
 }
 
 
@@ -100,9 +103,11 @@ if (isset($_POST["submitTime"])) {
                 <button class="timerButtons" onclick="start()" type="button"><i class="fa fa-play" aria-hidden="true"></i> Start</button>
                 <button class="timerButtons" onclick="pause()" type="button"><i class="fa fa-pause-circle-o" aria-hidden="true"></i> Pause</button>
                 <button class="timerButtons" onclick="stop()"><i class="fa fa-trash-o" aria-hidden="true"></i> Restart</button>
+                <hr>
             </div>
 
-            <div name="stopwatch" id="stopwatch" class="stopwatch">00:00:00</div>
+            <div name="stopwatch" id="stopwatch" class="stopwatch">00:00:00 </div>
+           
  
             <input class="submitTime" name="submitTime" id="submitTime" type="button" value="Salvesta tulemus" onclick="submit()"><span id="notice"><?php echo $notice; ?></span>
 
