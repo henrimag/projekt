@@ -27,17 +27,17 @@ input[type="submit"] {
 }
 
 
-
 .menu {
-    background-color: gray;
-    font-size: 1.5em;
-    text-align: center;
-    align-items: center;
-    font-style: monospace;
-    font-style: bold;
-    font-size: large;
-    color: rgb(79, 173, 54);
-  }
+  background-color: gray;
+  font-size: 1.5em;
+  text-align: center;
+  align-items: center;
+  font-style: monospace;
+  font-style: bold;
+  font-size: large;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
   
 .timerDiv{
     background-color: rgb(18, 65, 221);
@@ -57,4 +57,22 @@ input[type="submit"] {
   padding: 1cm;
 }
 
+.menu p {
+  color: rgb(79, 173, 54);
+  font-size: 2em;
+  margin: 0 0 1em 0;
+}
+
+nav a {  
+  font-size: 1.5em;
+  color: whitesmoke;
+}
+
+nav a:not(:first-child):before {
+  content: "|";
+}
+
+nav a, nav a:not(:first-child):before {
+  margin-right: 1em;
+}
 
