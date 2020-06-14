@@ -16,15 +16,14 @@
         </h1>
         <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             <div class="inputData">
-                <label>E-mail:</label><br>
+                <label>E-mail</label><br>
                     <input type="email" name="email" placeholder="Sisesta E-mail"><br><br>
 
-                <label>Salasõna:</label><br>
+                <label>Salasõna</label><br>
                     <input name="password" type="password" placeholder="Sisesta salasõna"><br><br>
             </div>
             <input name="login" type="button" value="Logi sisse õpilasena" onclick="window.location.href = 'student.php';">
             <input name="login" type="button" value="Logi sisse õppejõuna" onclick="window.location.href = 'teacher.php';">
-            <hr>
         </form>
         <hr>
         <p>Loo endale <a href="https://ois2.tlu.ee/tluois/uus_ois2.tud_leht">kasutajakonto</a></p>
