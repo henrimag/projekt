@@ -3,13 +3,13 @@ html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: url('../images/login_background.jpg');
+  /* background-image: url('../images/login_background.jpg'); */
 }
 
 .logInForm {
   width: 320px;
   height: 420px;
-  background: rgb(16, 192, 168);
+  background: rgb(93, 236, 217);
   color: #fff;
   top: 50%;
   left: 50%;
@@ -17,10 +17,6 @@ html {
   transform: translate(-50%,-50%);
   box-sizing: border-box;
   padding: 20px 30px;
-  border: 2px;
-  border-color: black;
-  border-style: double;
-  border-radius: 5px;
 }
 
 .inputData label {
@@ -37,14 +33,14 @@ html {
 
 .logInForm input[type="button"]:hover {
     cursor: pointer;
-    background: #175e21;
+    background: #1a6353;
     /* color: #000;
     border-style: solid; */
 }
 
 .inputData input[type="email"], input[type="password"] {
     border: none;
-    border-bottom: 1.5px solid rgb(3, 110, 39);
+    border-bottom: 1.5px solid rgb(0, 126, 109);
     background: transparent;
     outline: none;
     height: 25px;
@@ -56,7 +52,7 @@ html {
     border: none;
     outline: none;
     height: 35px;
-    background: #59973c;
+    background: #189e81;
     color: rgb(0, 0, 0);
     font-size: 18px;
     border-radius: 20px;

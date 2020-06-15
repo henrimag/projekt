@@ -40,7 +40,7 @@ input[type="submit"] {
 }
   
 .timerDiv{
-    background-color: rgb(18, 65, 221);
+    background-color: rgb(43, 67, 153);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,6 +61,43 @@ input[type="submit"] {
   color: rgb(79, 173, 54);
   font-size: 2em;
   margin: 0 0 1em 0;
+}
+
+.timerDiv input[type="button"] {
+  border: none;
+  outline: none;
+  height: 35px;
+  background: #1fc4a0;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  width: 5cm;
+}
+.timerButtons button[type="button"] {
+  border: none;
+  outline: none;
+  height: 35px;
+  background: #1fc4a0;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  width: 5cm;
+}
+
+.timerButtons button[type="button"]:hover {
+  cursor: pointer;
+  background: #1da185;
+  /* color: #000;
+  border-style: solid; */
+}
+
+.timerDiv input[type="button"]:hover {
+  cursor: pointer;
+  background: #1da185;
+  /* color: #000;
+  border-style: solid; */
 }
 
 nav a {  
