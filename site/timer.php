@@ -103,7 +103,7 @@ if (isset($_POST["submitTime"])) {
             <div class="timerButtons">
                 <button class="timerButtons" onclick="start()" type="button"><i class="fa fa-play" aria-hidden="true"></i> Start</button>
                 <button class="timerButtons" onclick="pause()" type="button"><i class="fa fa-pause-circle-o" aria-hidden="true"></i> Pause</button>
-                <button class="timerButtons" onclick="stop()" type="button"><i class="fa fa-trash-o" aria-hidden="true"></i> Restart</button>
+                <button class="timerButtons" onclick="stop()"><i class="fa fa-trash-o" aria-hidden="true"></i> Restart</button>
                 <hr>
             </div>
 
