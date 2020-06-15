@@ -18,6 +18,7 @@ $statsHTML = readAllStats();
 <body>
 <?php
     echo $statsHTML;
+  
     ?>
 </body>
 
