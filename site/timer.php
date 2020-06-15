@@ -29,8 +29,8 @@ if (isset($_POST["submitTime"])) {
         $Activity_Activity_ID_Error = "Palun vali õppeaine!";
     }
 
-    if (isset($_POST["allsubjects"]) and !empty($_POST["allsubjects"])) {
-        $Subject_Subject_ID = intval($_POST["allsubjects"]);
+    if (isset($_POST["allSubjects"]) and !empty($_POST["allSubjects"])) {
+        $Subject_Subject_ID = intval($_POST["allSubjects"]);
     } else {
         $Subject_Subject_ID_Error = "Palun vali õpitegevus!";
     }
@@ -39,11 +39,12 @@ if (isset($_POST["submitTime"])) {
     //ajakulu
     if (isset($_POST["timeValue"]) and !empty($_POST["timeValue"])) {
         $Time_Spent = $_POST["timeValue"];
+      
     } else {
         echo $Time_Spent_Error = "Ei saa salvestada null ajaga!";
     }
-
-    saveResult($Activity_Activity_ID, $Time_Spent, $Timestamp, $Subject_Subject_ID);
+    echo $Activity_Activity_ID . ";" . $Time_Spent .";" . $Timestamp . ";" . $Subject_Subject_ID . ";";
+    $notice = saveResult($Activity_Activity_ID, $Time_Spent, $Timestamp, $Subject_Subject_ID);
     echo "Edukalt salvestatud";
 } else {
     echo "Ei ole salvestatud ";
@@ -109,9 +110,9 @@ if (isset($_POST["submitTime"])) {
             <div name="stopwatch" id="stopwatch" class="stopwatch">00:00:00 </div>
            
  
-            <input class="submitTime" name="submitTime" id="submitTime" type="button" value="Salvesta tulemus" onclick="submit()"><span id="notice"><?php echo $notice; ?></span>
+            <input class="submitTime" name="submitTime" id="submitTime" type="submit" value="Salvesta tulemus"><span id="notice"><?php echo $notice; ?></span>
 
-            <input type="hidden" value="<?php echo microtime(true); ?>" name="timeValue" class="timeValue" id="timeValue">
+            <input type="hidden" value="00:00:00" name="timeValue" class="timeValue" id="timeValue">
 
         </div>
 
