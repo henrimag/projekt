@@ -2,10 +2,13 @@ var ms = 0, s = 0, m = 0;
 var timer;
 var startTime;
 var stopwatchElement = document.querySelector('.stopwatch');
+
+
+
 function start() {
     startTime = Date.now();
     if (!timer) {//kui vajutatakse timer start siis ei saa vajutada teist korda
-        timer = setInterval(run, 10)
+        timer = setInterval(run, 1000)
     }
 }
 
@@ -13,7 +16,7 @@ function run() {
     stopwatchElement.textContent = getTimer();
     $('#timeValue').val(getTimer());
     ms++;
-    if (ms == 100) {
+    if (ms == 60) {
         ms = 0;
         s++;
     }
