@@ -1,8 +1,4 @@
 <?php
-require('../functions/subject_names.php');
-
-
-
 function readAllStats()
 {
 	$subject_Names = [
