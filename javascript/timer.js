@@ -3,7 +3,11 @@ var timer;
 var startTime;
 var stopwatchElement = document.querySelector('.stopwatch');
 
-
+function submit() {
+    if (confirm("Oled sa kindel, et soovid tulemust salvestada?")) {
+        
+    }
+}
 
 function start() {
     startTime = Date.now();
@@ -34,11 +38,13 @@ function pause() {
 }
 
 function stop() {
-    stopTimer();
-    ms = 0;
-    s = 0;
-    m = 0;
-    stopwatchElement.textContent = getTimer();
+    if (confirm("Oled sa kindel, et soovid tulemust nullida?")) {
+        stopTimer();
+        ms = 0;
+        s = 0;
+        m = 0;
+        stopwatchElement.textContent = getTimer();
+    }
 }
 
 function stopTimer() {
