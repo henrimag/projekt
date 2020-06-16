@@ -40,7 +40,7 @@ input[type="submit"] {
 }
   
 .timerDiv{
-    background-color: rgb(204, 174, 4);
+    background-color: rgb(31, 148, 216);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,42 +64,82 @@ input[type="submit"] {
   margin: 0 0 1em 0;
 }
 
+/* SUBMIT BUTTON START */
 .timerDiv input[type="button"], .timerDiv input[type="submit"] {
   border: none;
   outline: none;
   height: 35px;
-  background: #1fc4a0;
+  background: #fffb17;
   color: rgb(0, 0, 0);
   font-size: 18px;
   border-radius: 20px;
   margin-bottom: 10px;
   width: 5cm;
-}
-.timerButtons button[type="button"] {
-  border: none;
-  outline: none;
-  height: 35px;
-  background: #1fc4a0;
-  color: rgb(0, 0, 0);
-  font-size: 18px;
-  border-radius: 20px;
-  margin-bottom: 10px;
-  width: 5cm;
-}
-
-.timerButtons button[type="button"]:hover {
-  cursor: pointer;
-  background: #1da185;
-  /* color: #000;
-  border-style: solid; */
 }
 
 .timerDiv input[type="submit"]:hover {
   cursor: pointer;
-  background: #1da185;
-  /* color: #000;
-  border-style: solid; */
+  background: #d8c730;
 }
+/* SUBMIT BUTTON END */
+
+/* START BUTTON START */
+.timerButtons button[type="startButton"] {
+  border: none;
+  outline: none;
+  height: 35px;
+  background: #17b639;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  width: 5cm;
+}
+
+.timerButtons button[type="startButton"]:hover {
+  cursor: pointer;
+  background: #20a01c;
+}
+/* START BUTTON END */
+
+
+/* PAUSE BUTTON START */
+.timerButtons button[type="pauseButton"] {
+  border: none;
+  outline: none;
+  height: 35px;
+  background: #d48748;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  width: 5cm;
+}
+
+.timerButtons button[type="pauseButton"]:hover {
+  cursor: pointer;
+  background: #af814d;
+}
+/* PAUSE BUTTON END */
+
+/* RESTART BUTTON START */
+.timerButtons button[type="restartButton"] {
+  border: none;
+  outline: none;
+  height: 35px;
+  background: #a31a1a;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  width: 5cm;
+}
+
+.timerButtons button[type="restartButton"]:hover {
+  cursor: pointer;
+  background: #850b0b;
+}
+/* RESTART BUTTON END */
 
 nav a {  
   font-size: 1.5em;
