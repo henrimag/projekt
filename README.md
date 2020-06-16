@@ -2,6 +2,18 @@
 Tarkvara projekt 2020
 
 
+## Setup peale kloonimist
+
+Tee fail `config.php` projekti baaskausta järgmise sisuga:
+```
+<?php
+	$serverHost = "host";
+	$serverUsername = "user";
+	$serverPassword = "pass";
+	$database = "database"; 
+```
+
+
 ## Uue lehe lisamine
 
 Mõned asjad, mida uue lehe lisamisel silmas hoida
