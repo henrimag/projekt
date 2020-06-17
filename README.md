@@ -8,11 +8,10 @@ TimeSort veebirakendus on loodud tarkvara arenduse projekti raames Tallinna Üli
 4) Robin Kadakas
 
 ## Kuvatõmmised veebirakendusest - hiljem lisada
-[Menüü]()
-[Aja salvestus](https://github.com/henrimag/projekt/blob/master/images/Kuvat%C3%B5mmised/salvesta%20aega.png)
-[Logimine](https://github.com/henrimag/projekt/blob/master/images/Kuvat%C3%B5mmised/logimine.png)
+1) Menüü](https://github.com/henrimag/projekt/blob/master/images/Kuvat%C3%B5mmised/uus%20menuu.png)
+2) [Aja salvestus](https://github.com/henrimag/projekt/blob/master/images/Kuvat%C3%B5mmised/salvesta%20aega.png)
+3) [Logimine](https://github.com/henrimag/projekt/blob/master/images/Kuvat%C3%B5mmised/logimine.png)
 
-## Kuvatõmmised veebirakendusest - HILJEM LISADA
 
 ## Paigaldusjuhiseid ja arenduskeskkonna ülesseadmise juhised
 Vaja läheb internetti, tuleb üles seadistada kohalik host (local host) kasutades kas [XAMPP](https://premium.wpmudev.org/blog/setting-up-xampp/) tarkvara või midagi muud. Juhul kui server olemas, saab kasutada [PuTTY](https://www.putty.org/) terminali serveriga suhtlemiseks ning koos [WinSCP](https://winscp.net/eng/download.php) tarkvaraga saab tegeleda failihaldusega. Kui on serveriga ühendus tehtud tuleb PuTTY terminalis navigeerida sobivasse kausta ning käsureale kirjutada "git clone https://github.com/henrimag/projekt.git". Selle tulemusena tehakse koopia meie rakendusest ning siis ei jää muud üle kui seadistada Veebibrauseris proxy ning sisestada aadressiribale serveri URL koos teekonnaga.
