@@ -1,9 +1,5 @@
 # TimeSort veebirakendus - Tarkvara projekt 2020 
-<<<<<<< HEAD
 TimeSort veebirakendus on loodud tarkvara arenduse projekti raames Tallinna Ülikooli, Digitehnoloogiate Instituudi, neljaliikmelise meeskonna poolt. Eesmärgiks on jälgida ja sisestada tudengite aega. Sellest tulenevalt saaks õppejõud tagasisidet enda kursuse raames ning tudengid ei jääks ajahätta, sest rakendus aitab ka aega planeerida.
-=======
-TimeSort veebirakendus on loodud tarkvara arenduse projekti raames Tallinna Ülikooli, Digitehnoloogiate instituudi, neljaliikmelise meeskonna poolt. Eesmärgiks on jälgida ja sisestada tudengite aega. Sellest tulenevalt saaks õppejõud tagasisidet enda kursuse raames ning tudengid ei jääks ajahätta, sest rakendus aitab ka aega planeerida.
->>>>>>> aad23876dfde5762dce8ea7b6597b1788c37d781
 
 ## Meeskond
 1) Henri Mägi
@@ -11,14 +7,16 @@ TimeSort veebirakendus on loodud tarkvara arenduse projekti raames Tallinna Üli
 3) Karl Aleksander Leoste
 4) Robin Kadakas
 
-<<<<<<< HEAD
 ## Kuvatõmmised veebirakendusest - hiljem lisada
-=======
+[Menüü]()
+[Aja salvestus](https://github.com/henrimag/projekt/blob/master/images/Kuvat%C3%B5mmised/salvesta%20aega.png)
+[Logimine](https://github.com/henrimag/projekt/blob/master/images/Kuvat%C3%B5mmised/logimine.png)
+
 ## Kuvatõmmised veebirakendusest - HILJEM LISADA
 
 ## Paigaldusjuhiseid ja arenduskeskkonna ülesseadmise juhised
 Vaja läheb internetti, tuleb üles seadistada kohalik host (local host) kasutades kas [XAMPP](https://premium.wpmudev.org/blog/setting-up-xampp/) tarkvara või midagi muud. Juhul kui server olemas, saab kasutada [PuTTY](https://www.putty.org/) terminali serveriga suhtlemiseks ning koos [WinSCP](https://winscp.net/eng/download.php) tarkvaraga saab tegeleda failihaldusega. Kui on serveriga ühendus tehtud tuleb PuTTY terminalis navigeerida sobivasse kausta ning käsureale kirjutada "git clone https://github.com/henrimag/projekt.git". Selle tulemusena tehakse koopia meie rakendusest ning siis ei jää muud üle kui seadistada Veebibrauseris proxy ning sisestada aadressiribale serveri URL koos teekonnaga.
->>>>>>> aad23876dfde5762dce8ea7b6597b1788c37d781
+
 
 ## Kasutatud tehnoloogiad
 1) Visual Studio Code - versioon 1.46.0
