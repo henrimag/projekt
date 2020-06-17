@@ -7,12 +7,11 @@ TimeSort veebirakendus on loodud tarkvara arenduse projekti raames Tallinna Üli
 3) Karl Aleksander Leoste
 4) Robin Kadakas
 
-## Kuvatõmmised veebirakendusest - hiljem lisada
-[Menüü]()
-[Aja salvestus](https://github.com/henrimag/projekt/blob/master/images/Kuvat%C3%B5mmised/salvesta%20aega.png)
-[Logimine](https://github.com/henrimag/projekt/blob/master/images/Kuvat%C3%B5mmised/logimine.png)
+## Kuvatõmmised veebirakendusest
+1) [Menüü](https://github.com/henrimag/projekt/blob/master/images/Kuvat%C3%B5mmised/uus%20menuu.png)
+2) [Aja salvestus](https://github.com/henrimag/projekt/blob/master/images/Kuvat%C3%B5mmised/salvesta%20aega.png)
+3) [Logimine](https://github.com/henrimag/projekt/blob/master/images/Kuvat%C3%B5mmised/logimine.png)
 
-## Kuvatõmmised veebirakendusest - HILJEM LISADA
 
 ## Paigaldusjuhiseid ja arenduskeskkonna ülesseadmise juhised
 Vaja läheb internetti, tuleb üles seadistada kohalik host (local host) kasutades kas [XAMPP](https://premium.wpmudev.org/blog/setting-up-xampp/) tarkvara või midagi muud. Juhul kui server olemas, saab kasutada [PuTTY](https://www.putty.org/) terminali serveriga suhtlemiseks ning koos [WinSCP](https://winscp.net/eng/download.php) tarkvaraga saab tegeleda failihaldusega. Kui on serveriga ühendus tehtud tuleb PuTTY terminalis navigeerida sobivasse kausta ning käsureale kirjutada "git clone https://github.com/henrimag/projekt.git". Selle tulemusena tehakse koopia meie rakendusest ning siis ei jää muud üle kui seadistada Veebibrauseris proxy ning sisestada aadressiribale serveri URL koos teekonnaga.
@@ -24,22 +23,19 @@ Vaja läheb internetti, tuleb üles seadistada kohalik host (local host) kasutad
 3) WinSCP - versioon 5.15.3
 4) XAMPP - versioon 7.4.6
 5) SimpleSAMLphp - versioon 1.14.17
-<<<<<<< HEAD
-=======
 6) phpMyAdmin - versioon 4.4.15.10
 
 ## Veebiserver / andmebaasi server informatsioon
-//Andmebaasi server
+Andmebaasi server
 1) Server type: MariaDB
 2) Server version: 10.2.25-MariaDB - MariaDB Server
 3) Protocol version: 10
 4) Server charset: UTF-8 Unicode (utf8) 
 
-//Veebiserver
+Veebiserver
 1) Apache/2.4.6 (CentOS)
 2) PHP extension: mysqli
 3) PHP version: 5.6.40
->>>>>>> aad23876dfde5762dce8ea7b6597b1788c37d781
 
 ## Setup peale kloonimist
 
