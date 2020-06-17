@@ -3,6 +3,53 @@ require('../config.php');
 require('../data.php');
 
 
+function readStatsOrderByDays() {
+	$data = [];
+
+	global $conn;
+	global $subject_names;
+	$sql = "SELECT * FROM Student_Entry ORDER BY Timestamp ASC";
+	$result = mysqli_query($conn, $sql);
+	echo $conn->error;
+	$query_results = mysqli_num_rows($result);
+
+	if ($query_results > 0) {		
+		$write_data = function($data_row, $row) {
+			$data_row []= $row['Time_Spent'];
+			return $data_row;
+		};
+
+		$save_data = function($write_data, $data, $data_row, $row) {
+			$data []= $write_data($data_row, $row);
+			return $data;
+		};
+
+		$data_row = null;
+		$row = mysqli_fetch_assoc($result);
+		$day = date('d', strtotime($row['Timestamp']));
+
+		do {			
+			$newday = date('d', strtotime($row['Timestamp']));
+			if ($newday == $day) {
+				$data_row = $write_data($data_row, $row);
+			}
+			else {
+				$data = $save_data($write_data, $data, $data_row, $row);
+
+				$data_row = [];
+				$day = $newday;
+			}
+		} while ($row = mysqli_fetch_assoc($result));
+
+		if ($data_row != []) {
+			$data = $save_data($write_data, $data, $data_row, $row);
+		}
+	}
+
+	return $data;
+}
+
+
 function readAllStatsASC()
 {
 	global $conn;

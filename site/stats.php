@@ -27,6 +27,8 @@ $statsHTML = readAllStatsASC();
 
     <?php
 
+    var_dump(readStatsOrderByDays());
+    /*
     echo $statsHTML;
 
     if (isset($_POST["DESC"]) && ($statsHTML = readAllStatsASC())) {
@@ -40,6 +42,8 @@ $statsHTML = readAllStatsASC();
         echo $statsHTML = readAllStatsASC();
     } else {
     }
+
+    */
 
     ?>
 </div>
