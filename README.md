@@ -7,8 +7,8 @@ TimeSort veebirakendus on loodud tarkvara arenduse projekti raames Tallinna Üli
 3) Karl Aleksander Leoste
 4) Robin Kadakas
 
-## Kuvatõmmised veebirakendusest - hiljem lisada
-1) Menüü](https://github.com/henrimag/projekt/blob/master/images/Kuvat%C3%B5mmised/uus%20menuu.png)
+## Kuvatõmmised veebirakendusest
+1) [Menüü](https://github.com/henrimag/projekt/blob/master/images/Kuvat%C3%B5mmised/uus%20menuu.png)
 2) [Aja salvestus](https://github.com/henrimag/projekt/blob/master/images/Kuvat%C3%B5mmised/salvesta%20aega.png)
 3) [Logimine](https://github.com/henrimag/projekt/blob/master/images/Kuvat%C3%B5mmised/logimine.png)
 
