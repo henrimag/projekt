@@ -81,7 +81,7 @@ input[type="submit"] {
 /* SUBMIT BUTTON END */
 
 /* START BUTTON START */
-.timerButtons button[type="startButton"] {
+.timerButtons .startButton {
   border: none;
   outline: none;
   height: 35px;
@@ -93,7 +93,7 @@ input[type="submit"] {
   width: 5cm;
 }
 
-.timerButtons button[type="startButton"]:hover {
+.timerButtons .startButton:hover {
   cursor: pointer;
   background: #20a01c;
 }
@@ -102,7 +102,7 @@ input[type="submit"] {
 
 
 /* PAUSE BUTTON START */
-.timerButtons button[type="pauseButton"] {
+.timerButtons .pauseButton {
   border: none;
   outline: none;
   height: 35px;
@@ -114,14 +114,14 @@ input[type="submit"] {
   width: 5cm;
 }
 
-.timerButtons button[type="pauseButton"]:hover {
+.timerButtons .pauseButton:hover {
   cursor: pointer;
   background: #af814d;
 }
 /* PAUSE BUTTON END */
 
 /* RESTART BUTTON START */
-.timerButtons button[type="restartButton"] {
+.timerButtons .restartButton {
   border: none;
   outline: none;
   height: 35px;
@@ -133,7 +133,7 @@ input[type="submit"] {
   width: 5cm;
 }
 
-.timerButtons button[type="restartButton"]:hover {
+.timerButtons .restartButton:hover {
   cursor: pointer;
   background: #850b0b;
 }

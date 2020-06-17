@@ -1,5 +1,9 @@
 # TimeSort veebirakendus - Tarkvara projekt 2020 
+<<<<<<< HEAD
+TimeSort veebirakendus on loodud tarkvara arenduse projekti raames Tallinna Ülikooli, Digitehnoloogiate Instituudi, neljaliikmelise meeskonna poolt. Eesmärgiks on jälgida ja sisestada tudengite aega. Sellest tulenevalt saaks õppejõud tagasisidet enda kursuse raames ning tudengid ei jääks ajahätta, sest rakendus aitab ka aega planeerida.
+=======
 TimeSort veebirakendus on loodud tarkvara arenduse projekti raames Tallinna Ülikooli, Digitehnoloogiate instituudi, neljaliikmelise meeskonna poolt. Eesmärgiks on jälgida ja sisestada tudengite aega. Sellest tulenevalt saaks õppejõud tagasisidet enda kursuse raames ning tudengid ei jääks ajahätta, sest rakendus aitab ka aega planeerida.
+>>>>>>> aad23876dfde5762dce8ea7b6597b1788c37d781
 
 ## Meeskond
 1) Henri Mägi
@@ -7,10 +11,14 @@ TimeSort veebirakendus on loodud tarkvara arenduse projekti raames Tallinna Üli
 3) Karl Aleksander Leoste
 4) Robin Kadakas
 
+<<<<<<< HEAD
+## Kuvatõmmised veebirakendusest - hiljem lisada
+=======
 ## Kuvatõmmised veebirakendusest - HILJEM LISADA
 
 ## Paigaldusjuhiseid ja arenduskeskkonna ülesseadmise juhised
 Vaja läheb internetti, tuleb üles seadistada kohalik host (local host) kasutades kas [XAMPP](https://premium.wpmudev.org/blog/setting-up-xampp/) tarkvara või midagi muud. Juhul kui server olemas, saab kasutada [PuTTY](https://www.putty.org/) terminali serveriga suhtlemiseks ning koos [WinSCP](https://winscp.net/eng/download.php) tarkvaraga saab tegeleda failihaldusega. Kui on serveriga ühendus tehtud tuleb PuTTY terminalis navigeerida sobivasse kausta ning käsureale kirjutada "git clone https://github.com/henrimag/projekt.git". Selle tulemusena tehakse koopia meie rakendusest ning siis ei jää muud üle kui seadistada Veebibrauseris proxy ning sisestada aadressiribale serveri URL koos teekonnaga.
+>>>>>>> aad23876dfde5762dce8ea7b6597b1788c37d781
 
 ## Kasutatud tehnoloogiad
 1) Visual Studio Code - versioon 1.46.0
@@ -18,6 +26,8 @@ Vaja läheb internetti, tuleb üles seadistada kohalik host (local host) kasutad
 3) WinSCP - versioon 5.15.3
 4) XAMPP - versioon 7.4.6
 5) SimpleSAMLphp - versioon 1.14.17
+<<<<<<< HEAD
+=======
 6) phpMyAdmin - versioon 4.4.15.10
 
 ## Veebiserver / andmebaasi server informatsioon
@@ -31,6 +41,7 @@ Vaja läheb internetti, tuleb üles seadistada kohalik host (local host) kasutad
 1) Apache/2.4.6 (CentOS)
 2) PHP extension: mysqli
 3) PHP version: 5.6.40
+>>>>>>> aad23876dfde5762dce8ea7b6597b1788c37d781
 
 ## Setup peale kloonimist
 
