@@ -2,19 +2,19 @@
 TimeSort veebirakendus on loodud tarkvara arenduse projekti raames Tallinna Ülikooli, Digitehnoloogiate Instituudi, neljaliikmelise meeskonna poolt. Eesmärgiks on jälgida ja sisestada tudengite aega. Sellest tulenevalt saaks õppejõud tagasisidet enda kursuse raames ning tudengid ei jääks ajahätta, sest rakendus aitab ka aega planeerida.
 
 ## Meeskond
-Henri Mägi
-Henry Pajuri
-Karl Aleksander Leoste
-Robin Kadakas
+1)Henri Mägi
+2)Henry Pajuri
+3)Karl Aleksander Leoste
+4)Robin Kadakas
 
 ## Kuvatõmmised veebirakendusest - hiljem lisada
 
 ## Kasutatud tehnoloogiad
-Visual Studio Code - versioon 1.46.0
-PuTTY - versioon 0.72
-WinSCP - versioon 5.15.3
-XAMPP - versioon 7.4.6
-SimpleSAMLphp - versioon 1.14.17
+1)Visual Studio Code - versioon 1.46.0
+2)PuTTY - versioon 0.72
+3)WinSCP - versioon 5.15.3
+4)XAMPP - versioon 7.4.6
+5)SimpleSAMLphp - versioon 1.14.17
 
 ## Setup peale kloonimist
 
