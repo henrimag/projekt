@@ -1,5 +1,6 @@
 <?php require('../functions/page_loading.php');
 require('../config.php');
+require('../data.php');
 require('../functions/get_stats.php');
 display_student_menu(true);
 

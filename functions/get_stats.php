@@ -1,5 +1,6 @@
 <?php
 require('../config.php');
+require('../data.php');
 
 
 function readAllStatsASC()
