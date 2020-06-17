@@ -23,22 +23,19 @@ Vaja läheb internetti, tuleb üles seadistada kohalik host (local host) kasutad
 3) WinSCP - versioon 5.15.3
 4) XAMPP - versioon 7.4.6
 5) SimpleSAMLphp - versioon 1.14.17
-<<<<<<< HEAD
-=======
 6) phpMyAdmin - versioon 4.4.15.10
 
 ## Veebiserver / andmebaasi server informatsioon
-//Andmebaasi server
+Andmebaasi server
 1) Server type: MariaDB
 2) Server version: 10.2.25-MariaDB - MariaDB Server
 3) Protocol version: 10
 4) Server charset: UTF-8 Unicode (utf8) 
 
-//Veebiserver
+Veebiserver
 1) Apache/2.4.6 (CentOS)
 2) PHP extension: mysqli
 3) PHP version: 5.6.40
->>>>>>> aad23876dfde5762dce8ea7b6597b1788c37d781
 
 ## Setup peale kloonimist
 
