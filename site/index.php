@@ -12,6 +12,11 @@
   <?php display_teacher_menu(true); ?>
   <?php display_student_menu(true); ?>
   
+  <script>
+
+  </script>
+
+
 </body>
 
 </html>
