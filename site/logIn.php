@@ -12,7 +12,7 @@
 <body>
     <div class="logInForm">
         <h1>TimeSort
-            <hr>
+            <!-- <hr> -->
         </h1>
         <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             <div class="inputData">
@@ -25,7 +25,7 @@
             <input name="login" type="button" value="Logi sisse õpilasena" onclick="window.location.href = 'student.php';">
             <input name="login" type="button" value="Logi sisse õppejõuna" onclick="window.location.href = 'teacher.php';">
         </form>
-        <hr>
+        <!-- <hr> -->
         <p>Loo endale <a href="https://ois2.tlu.ee/tluois/uus_ois2.tud_leht">kasutajakonto</a></p>
     </div>
 </body>

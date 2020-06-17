@@ -17,7 +17,7 @@ body {
 .logInForm {
   width: 320px;
   height: 420px;
-  background: rgb(93, 236, 217, 0.2);
+  background: rgba(61, 214, 188, 0.726);
   color: #fff;
   top: 50%;
   left: 50%;
@@ -41,18 +41,18 @@ body {
 
 .logInForm input[type="button"]:hover {
     cursor: pointer;
-    background: #1a6353;
+    background: #ffffff;
     /* color: #000;
     border-style: solid; */
 }
 
 .inputData input[type="email"], input[type="password"] {
     border: none;
-    border-bottom: 1.5px solid rgb(0, 126, 109);
+    border-bottom: 1.5px solid rgb(255, 255, 255);
     background: transparent;
     outline: none;
     height: 25px;
-    color: rgb(124, 124, 124);
+    color: rgb(0, 0, 0);
     font-size: 16px;
 }
 
@@ -62,10 +62,11 @@ body {
     height: 35px;
     background: #189e81;
     color: rgb(0, 0, 0);
-    font-size: 18px;
-    border-radius: 20px;
+    font-size: 16px;
+    border-radius: 15px;
     margin-bottom: 10px;
-    width: 5cm;
+    width: 4.4cm;
+    text-align: left;
 }
 
 h1 {
@@ -73,13 +74,15 @@ h1 {
   padding: 0 0 20px;
   text-align: center;
   font-size: 22px;
-  color: black;
-  font-style: oblique;
-  font-size: xx-large;
+  color: rgb(255, 255, 255);
+  font-size: 2.5em;
+  font-family: 'BlendaScript';
+  margin-bottom: 0.5cm;
+  margin-top: 0.5cm;
 }
 
 .menu {
-  background-color: gray;
+  background-color: rgb(61, 214, 189);
   font-size: 1.5em;
   text-align: center;
   align-items: center;
@@ -103,15 +106,16 @@ p {
 }
 
 .menu p {
-  color: rgb(79, 173, 54);
-  font-size: 2em;
+  color: rgb(255, 255, 255);
+  font-size: 3em;
   margin: 0 0 1em 0;
+  font-family: 'BlendaScript';
 }
 
 nav a:hover {  
   /* font-size: 1.5em; */
   color: rgb(0, 0, 0);
-  background-color: rgb(60, 212, 205);
+  background-color: rgb(255, 255, 255);
 }
 
 /* nav a:not(:first-child):before {
@@ -125,5 +129,12 @@ nav a, nav a:not(:first-child):before {
   /* border-style: solid; */
   padding: 10px;
   color: black;
+  font-family: 'BlendaScript';
+  font-size: 1em;
+  text-decoration: none;
 }
 
+@font-face{
+  font-family: 'BlendaScript'; /*a name to be used later*/
+  src: url('../fonts/BlendaScript.ttf'); /*URL to font*/
+}

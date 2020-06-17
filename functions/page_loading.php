@@ -1,7 +1,7 @@
 <?php
 
 function display_head($title, $description) {
-  echo '<head>';
+  // echo '<head>';
 
   //using variables
   echo '<title>'.$title.'</title>';
