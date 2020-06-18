@@ -22,7 +22,7 @@ display_student_menu(true);
     if (isset($_POST['submit-search'])) {
         global $subject_Names;
         $search = mysqli_real_escape_string($conn, $_POST['search']);
-        $sql = "SELECT Timestamp FROM Student_Entry WHERE Timestamp LIKE '%$search%'";
+        $sql = "SELECT * FROM Student_Entry WHERE Timestamp LIKE '%$search%'";
     
         $result = mysqli_query($conn, $sql);
         $queryResult = mysqli_num_rows($result);
