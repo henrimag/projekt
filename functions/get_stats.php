@@ -1,14 +1,18 @@
 <?php
 require('../config.php');
 require('../data.php');
+//require('stats.php');
+
+
 
 
 function readAllStatsASC()
 {
 	global $conn;
 	global $subject_Names;
+	//global $searchable;
 	$statsHTML = null;
-	$sql = "SELECT * FROM Student_Entry ORDER BY Time_Spent ASC";
+	$sql = "SELECT * FROM Student_Entry ORDER BY Student_Entry_ID ASC";
 	$result = mysqli_query($conn, $sql);
 	echo $conn->error;
 	$queryResults = mysqli_num_rows($result);

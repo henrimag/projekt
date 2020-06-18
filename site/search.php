@@ -17,32 +17,29 @@ display_student_menu(true);
 <h1>Otsingutulemused</h1>
 
 <div class="article-container">
-<?php
+    <?php
 
-if (isset($_POST['submit-search'])) {
-    global $subject_Names;
-    $search = mysqli_real_escape_string($conn, $_POST['search']);
-    $sql = "SELECT Subject_Subject_ID FROM Student_Entry WHERE Subject_Subject_ID LIKE '%$search%'";
-    echo $sql;
-    $result = mysqli_query($conn, $sql);
-    $queryResult = mysqli_num_rows($result);
+    if (isset($_POST['submit-search'])) {
+        global $subject_Names;
+        $search = mysqli_real_escape_string($conn, $_POST['search']);
+        $sql = "SELECT * FROM Student_Entry WHERE Timestamp LIKE '%$search%'";
+    
+        $result = mysqli_query($conn, $sql);
+        $queryResult = mysqli_num_rows($result);
 
-    echo"There are ".$queryResult. " results!";
+        echo "Leitud " . $queryResult . " tulemust!";
 
 
-    if($queryResult > 0) {
-        while($row = mysqli_fetch_assoc($result)){
-            echo"<div>
-            <h3>" .$subject_Names[$row['Subject_Subject_ID']]."</h3>
+        if ($queryResult > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo "<div>
+            <h3>" . $row['Student_Entry_ID'] . " | " . $subject_Names[$row['Subject_Subject_ID']] . " | "  . $subject_Names[$row['Activity_Activity_ID']] . " | " . $row['Time_Spent'] . " | " . $row['Timestamp'] . "</h3>
         </div>";
+            }
+        } else {
+            echo "Otsingutulemusi ei leitud..";
         }
-      
-    } else{
-        echo "Otsingutulemusi ei leitud..";
     }
-  
-}
 
-?>
+    ?>
 </div>
-
