@@ -6,9 +6,9 @@ display_student_menu(true);
 
 
 $searchable = "";
-//$statsHTML = ;
+$statsHTML = readAllStats("Student_Entry_ID", "DESC");
 
-switch($_POST['chooseSearchValue']){
+switch(isset($_POST['chooseSearchValue'])){
    
     case 'Student_Entry_ID':
         $searchable = 'Student_Entry_ID';
