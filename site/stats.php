@@ -56,17 +56,9 @@ display_student_menu(true);
 
 <body>
 
-    <div id="statsHTML">
-        <ul class="statsList">
-            <?php
-
-
-            ?>
-        </ul>
-    </div>
     <form method="post">
-        <input name="ASC" class="ASC" id="ASC" type="submit" value="ASC">
-        <input name="DESC" class="DESC" id="DESC" type="submit" value="DESC">
+        <!-- <input name="ASC" class="ASC" id="ASC" type="submit" value="ASC">
+        <input name="DESC" class="DESC" id="DESC" type="submit" value="DESC"> -->
     </form>
     <!--<button value="fix" onclick="test()"></button>-->
 
