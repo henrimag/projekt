@@ -96,8 +96,6 @@ if (isset($_POST["submitTime"])) {
                 <option value="14">Õppevideote vaatamine</option>
                 <option value="15">Teiste õpetamine</option>
                 <option value="16">Täpsustamata õpimeetod</option>
-                <i class="fa fa-play" aria-hidden="true"></i>
-                
             </select>
             <br>
         </div>

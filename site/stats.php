@@ -1,6 +1,7 @@
 <?php require('../functions/page_loading.php');
 require('../config.php');
 require('../functions/get_stats.php');
+require('../style/stats.css');
 display_student_menu(true);
 
 $statsHTML = readAllStatsASC();
@@ -15,12 +16,16 @@ $statsHTML = readAllStatsASC();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script defer src="../javascript/stats.js"></script>
 </head>
-<h1>Front page</h1>
+<h1>Statistika leht</h1>
+<body>
 <form action="search.php" method="POST">
-    <input name="search" type="text" id="searchInput" placeholder="Otsi ülesannet..." title="Sisesta otsitav ülesanne" onclick="">
-    <button type="submit" name="submit-search">Otsi!</button>
+    <div class="search">
+    <input class="search searchInput" name="search" type="text" id="searchInput" placeholder="Otsi ülesannet..." title="Sisesta otsitav ülesanne" onclick="">
+    <button class="search submit-search" type="submit" name="submit-search">Otsi!</button>
+    </div>
 </form>
-<h2>Kõik artiklid:</h2>
+</body>
+<h2>Kõik salvestused:</h2>
 
 
 <div class="article-container">

@@ -11,7 +11,7 @@ function saveResult($Activity_Activity_ID, $Time_Spent, $Timestamp, $Subject_Sub
     echo $conn->error;
     $stmt->bind_param("issi", $Activity_Activity_ID, $Time_Spent, $Timestamp, $Subject_Subject_ID);
     if ($stmt->execute()) {
-		$notice = "Aja salvestamine õnnestus!"; 
+		$notice = "Aeg salvestatud!"; 
 	} else {
 		$notice = "Aja salvestamisel tekkis tehniline viga: " . $stmt->error;
 	}

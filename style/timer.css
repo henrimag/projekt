@@ -202,3 +202,9 @@ nav a, nav a:not(:first-child):before {
   src: url('../fonts/BlendaScript.ttf'); /*URL to font*/
 }
 
+#notice{
+  color: #f7f7f7;
+  font-family: 'BlendaScript';
+  font-size: 1cm;
+}
+
