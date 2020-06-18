@@ -8,9 +8,9 @@ TimeSort veebirakendus on loodud tarkvara arenduse projekti raames Tallinna Üli
 4) Robin Kadakas
 
 ## Kuvatõmmised veebirakendusest
-1) ![](/projekt/images/Kuvatõmmised/uus%20menuu.jpg)
-2) [Aja salvestus](https://github.com/henrimag/projekt/blob/master/images/Kuvat%C3%B5mmised/salvesta%20aega.png)
-3) [Logimine](https://github.com/henrimag/projekt/blob/master/images/Kuvat%C3%B5mmised/logimine.png)
+1) ![Menüü](images/kuvatommised/uusmenuu.png)
+2) ![Aja salvestus](images/kuvatommised/salvestaaega.png)
+3) ![Logimine](images/kuvatommised/logimine.png)
 
 
 ## Paigaldusjuhiseid ja arenduskeskkonna ülesseadmise juhised
