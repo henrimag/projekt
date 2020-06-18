@@ -1,8 +1,9 @@
 html {
-    background-color: rgb(186, 250, 225);
+    background-color: rgb(61, 214, 189);
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+
   }
   
 body {
@@ -28,7 +29,7 @@ input[type="submit"] {
 
 
 .menu {
-  background-color: gray;
+  background-color: rgb(61, 214, 189);
   font-size: 1.5em;
   text-align: center;
   align-items: center;
@@ -44,25 +45,46 @@ input[type="submit"] {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 40vh;
+    height: 2000vh;
     justify-content: center;
     background-image: url('../images/sea_picture.jpg');
+    height: 400px;
 }
 
 .chooseSubject{
   align-items: center;
   margin: 8px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 1cm;
+  flex-direction: column;
+  justify-content: left;
+  padding: 0.1cm;
+  justify-content: space-evenly;
+  margin-left: 0.1mm;
+
 }
 
-.menu p {
-  color: rgb(79, 173, 54);
-  font-size: 2em;
-  margin: 0 0 1em 0;
+.chooseSubject label {
+  margin-bottom: 1mm;
+  margin-top: 3mm;
+  text-align: left;
+  font-weight: bold;
+
 }
+.chooseSubject select{
+  align-items: center;
+  margin: 8px;
+  left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 0.2cm;
+  justify-content: space-evenly;
+  margin-left: 0.1mm;
+  background-color: rgb(204, 248, 235);
+  font-size: .4cm;
+}
+
+
 
 /* SUBMIT BUTTON START */
 .timerDiv input[type="button"], .timerDiv input[type="submit"] {
@@ -145,7 +167,15 @@ input[type="submit"] {
 nav a:hover {  
   /* font-size: 1.5em; */
   color: rgb(0, 0, 0);
-  background-color: rgb(60, 212, 205);
+  background-color: rgb(254, 255, 255);
+  text-decoration: underline;
+}
+
+.menu p {
+  color: rgb(255, 255, 255);
+  font-size: 3em;
+  margin: 0 0 1em 0;
+  font-family: 'BlendaScript';
 }
 
 /* nav a {  
@@ -163,5 +193,18 @@ nav a, nav a:not(:first-child):before {
   /* border-style: solid; */
   padding: 10px;
   color: black;
+  font-family: 'BlendaScript';
+  text-decoration: none;
+}
+
+@font-face{
+  font-family: 'BlendaScript'; /*a name to be used later*/
+  src: url('../fonts/BlendaScript.ttf'); /*URL to font*/
+}
+
+#notice{
+  color: #f7f7f7;
+  font-family: 'BlendaScript';
+  font-size: 1cm;
 }
 
