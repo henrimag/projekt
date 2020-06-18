@@ -45,21 +45,46 @@ input[type="submit"] {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 40vh;
+    height: 2000vh;
     justify-content: center;
     background-image: url('../images/sea_picture.jpg');
-    height: 750px;
+    height: 400px;
 }
 
 .chooseSubject{
   align-items: center;
   margin: 8px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 0.3cm;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: left;
+  padding: 0.1cm;
+  justify-content: space-evenly;
+  margin-left: 0.1mm;
+
 }
+
+.chooseSubject label {
+  margin-bottom: 1mm;
+  margin-top: 3mm;
+  text-align: left;
+  font-weight: bold;
+
+}
+.chooseSubject select{
+  align-items: center;
+  margin: 8px;
+  left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 0.2cm;
+  justify-content: space-evenly;
+  margin-left: 0.1mm;
+  background-color: rgb(204, 248, 235);
+  font-size: .4cm;
+}
+
+
 
 /* SUBMIT BUTTON START */
 .timerDiv input[type="button"], .timerDiv input[type="submit"] {
