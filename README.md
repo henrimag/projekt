@@ -75,3 +75,6 @@ Selleks, et uus leht menüüs nähtaval oleks, tuleb teha järgmist:
 
 ### css, js, pildid, funktsioonid
 css ja js failid tuleb vastavalt panna `style` ja `javascript` kaustadesse, pildid `images` kausta, funktsioonid `functions` kausta
+
+# Litesents
+[MIT litsents](LICENSE)
