@@ -8,9 +8,9 @@ TimeSort veebirakendus on loodud tarkvara arenduse projekti raames Tallinna Üli
 4) Robin Kadakas
 
 ## Kuvatõmmised veebirakendusest
-1) ![Menüü](images/kuvatommised/uusmenuu.png)
-2) ![Aja salvestus](images/kuvatommised/salvestaaega.png)
-3) ![Logimine](images/kuvatommised/logimine.png)
+ ![Menüü](images/kuvatommised/uusmenuu.png)
+ ![Aja salvestus](images/kuvatommised/salvestaaega.png)
+ ![Logimine](images/kuvatommised/logimine.png)
 
 
 ## Paigaldusjuhiseid ja arenduskeskkonna ülesseadmise juhised
@@ -24,6 +24,9 @@ Vaja läheb internetti, tuleb üles seadistada kohalik host (local host) kasutad
 4) XAMPP - versioon 7.4.6
 5) SimpleSAMLphp - versioon 1.14.17
 6) phpMyAdmin - versioon 4.4.15.10
+
+## Andmebaasi loomine
+[Create table] (https://github.com/henrimag/projekt/blob/master/database/TimeSort_create.sql)
 
 ## Veebiserver / andmebaasi server informatsioon
 Andmebaasi server
