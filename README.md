@@ -26,7 +26,7 @@ Vaja läheb internetti, tuleb üles seadistada kohalik host (local host) kasutad
 6) phpMyAdmin - versioon 4.4.15.10
 
 ## Andmebaasi loomine
-[Tabel] (https://github.com/henrimag/projekt/blob/master/database/TimeSort_create.sql)
+[Tabeli loomine](https://github.com/henrimag/projekt/blob/master/database/TimeSort_create.sql)
 
 ## Veebiserver / andmebaasi server informatsioon
 Andmebaasi server
