@@ -8,45 +8,29 @@ function readStatsOrderByDays() {
 
 	global $conn;
 	global $subject_names;
-	$sql = "SELECT * FROM Student_Entry ORDER BY Timestamp ASC";
+	//$sql = "SELECT * FROM Student_Entry ORDER BY Timestamp ASC";
+	$sql = "SELECT CAST(Timestamp AS DATE) AS Date, AVG(Time_Spent) * 100 / MAX(AVG(Time_Spent)) OVER () AS AvgTime, COUNT(Student_Entry_ID) AS Amount FROM Student_Entry GROUP BY Date ORDER BY Timestamp ASC";
 	$result = mysqli_query($conn, $sql);
 	echo $conn->error;
 	$query_results = mysqli_num_rows($result);
+	$statsHTML = null;
 
-	if ($query_results > 0) {		
-		$write_data = function($data_row, $row) {
-			$data_row []= $row['Time_Spent'];
-			return $data_row;
-		};
+	if ($query_results > 0) {
+		$statsHTML = "<div class=data-columns>";
+		while ($row = mysqli_fetch_assoc($result)) {
+			//$data []= ['Date' => $row['Date'], 'Amount' => $row['Amount'], 'Time' => $row['Time']];
 
-		$save_data = function($write_data, $data, $data_row, $row) {
-			$data []= $write_data($data_row, $row);
-			return $data;
-		};
-
-		$data_row = null;
-		$row = mysqli_fetch_assoc($result);
-		$day = date('d', strtotime($row['Timestamp']));
-
-		do {			
-			$newday = date('d', strtotime($row['Timestamp']));
-			if ($newday == $day) {
-				$data_row = $write_data($data_row, $row);
-			}
-			else {
-				$data = $save_data($write_data, $data, $data_row, $row);
-
-				$data_row = [];
-				$day = $newday;
-			}
-		} while ($row = mysqli_fetch_assoc($result));
-
-		if ($data_row != []) {
-			$data = $save_data($write_data, $data, $data_row, $row);
+			$statsHTML .= '<div style="height:'.strval($row['AvgTime'] == null ? 0 : $row['AvgTime'] * 5).'px;"><p>'.$row['Date'].'</p><p>'.$row['Amount'].'</p></div>';
 		}
+		$statsHTML .= "</div>";
+	}
+	else {
+		$statsHTML = "<p>Andmed puuduvad.</p>";
 	}
 
-	return $data;
+
+
+	return $statsHTML;
 }
 
 

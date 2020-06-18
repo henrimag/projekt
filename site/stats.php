@@ -27,7 +27,7 @@ $statsHTML = readAllStatsASC();
 
     <?php
 
-    var_dump(readStatsOrderByDays());
+    echo readStatsOrderByDays();
     /*
     echo $statsHTML;
 

@@ -127,3 +127,12 @@ nav a, nav a:not(:first-child):before {
   color: black;
 }
 
+.data-columns {
+
+}
+
+.data-columns div {
+  display:inline-block;
+  background-color:red;
+  vertical-align:bottom;
+}
