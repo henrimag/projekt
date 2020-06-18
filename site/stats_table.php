@@ -53,10 +53,10 @@ switch(isset($_POST['chooseSearchValue'])){
 <h1>Esileht</h1>
 
 <form action="search.php" method="POST">
-    <input name="search" type="text" id="searchInput" placeholder="Otsi kuupäeva järgi..." title="Sisesta otsitav ülesanne" onclick="">
+    <input id="search" name="search" type="text" id="searchInput" placeholder="Otsi kuupäeva järgi..." title="Sisesta otsitav ülesanne" onclick="">
     <button type="submit" name="submit-search">Otsi!</button>
 </form>
-<button onclick="location.href = 'stats.php';" id="redirectButton" class="float-left submit-button" >Vaata tulemusi joonise kujul</button>
+<button onclick="location.href = 'stats.php';" id="redirectButton" class="float-left submit-button" >Tulemused joonisel</button>
 <h2>Kõik salvestused:</h2>
 <form method="POST">
     <select name="chooseSearchValue">

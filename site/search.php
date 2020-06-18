@@ -37,7 +37,7 @@ display_student_menu(true);
         </div>";
             }
         } else {
-            echo " Otsingutulemusi ei leitud..";
+            echo " Otsingutulemusi ei leitud.. (Otsida on võimalik aastaaja, kuupäeva või kellaaja järgi)";
         }
     }
 

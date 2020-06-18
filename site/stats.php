@@ -19,13 +19,13 @@ display_student_menu(true);
 <body>
 <form action="search.php" method="POST">
     <div class="search">
-    <input class="search searchInput" name="search" type="text" id="searchInput" placeholder="Otsi ülesannet..." title="Sisesta otsitav ülesanne" onclick="">
+    <input if="search" class="search searchInput" name="search" type="text" id="searchInput" placeholder="Otsi ülesannet..." title="Sisesta otsitav ülesanne" onclick="">
     <button class="search submit-search" type="submit" name="submit-search">Otsi!</button>
     </div>
 </form>
 
 </body>
-<button onclick="location.href = 'stats_table.php';" id="redirectButton" class="float-left submit-button" >Vaata tulemusi tabeli kujul</button>
+<button onclick="location.href = 'stats_table.php';" id="redirectButton" class="float-left submit-button" >Tulemused tabelil</button>
 <h2>Kõik salvestused:</h2>
 
 
