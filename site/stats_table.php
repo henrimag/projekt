@@ -50,14 +50,14 @@ switch(isset($_POST['chooseSearchValue'])){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script defer src="../javascript/stats.js"></script>
 </head>
-<h1>Esileht</h1>
+<h1>Statistika tabel</h1>
 
 <form action="search.php" method="POST">
     <input id="search" name="search" type="text" id="searchInput" placeholder="Otsi kuupäeva järgi..." title="Sisesta otsitav ülesanne" onclick="">
     <button type="submit" name="submit-search">Otsi!</button>
 </form>
 <button onclick="location.href = 'stats.php';" id="redirectButton" class="float-left submit-button" >Tulemused joonisel</button>
-<h2>Kõik salvestused:</h2>
+<h2>Kõik salvestused</h2>
 <form method="POST">
     <select name="chooseSearchValue">
         <option value="Student_Entry_ID">Järjekorra numbri järgi</option>
