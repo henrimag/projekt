@@ -135,6 +135,16 @@ nav a, nav a:not(:first-child):before {
   text-decoration: none;
 }
 
+.data-columns {
+
+}
+
+.data-columns div {
+  display:inline-block;
+  background-color:red;
+  vertical-align:bottom;
+}
+
 @font-face{
   font-family: 'BlendaScript'; /*a name to be used later*/
   src: url('../fonts/BlendaScript.ttf'); /*URL to font*/
