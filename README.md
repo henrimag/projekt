@@ -8,9 +8,9 @@ TimeSort veebirakendus on loodud tarkvara arenduse projekti raames Tallinna Üli
 4) Robin Kadakas
 
 ## Kuvatõmmised veebirakendusest
-1) [Menüü](https://github.com/henrimag/projekt/blob/master/images/Kuvat%C3%B5mmised/uus%20menuu.png)
-2) [Aja salvestus](https://github.com/henrimag/projekt/blob/master/images/Kuvat%C3%B5mmised/salvesta%20aega.png)
-3) [Logimine](https://github.com/henrimag/projekt/blob/master/images/Kuvat%C3%B5mmised/logimine.png)
+ ![Menüü](images/kuvatommised/uusmenuu.png)
+ ![Aja salvestus](images/kuvatommised/salvestaaega.png)
+ ![Logimine](images/kuvatommised/logimine.png)
 
 
 ## Paigaldusjuhiseid ja arenduskeskkonna ülesseadmise juhised
@@ -24,6 +24,9 @@ Vaja läheb internetti, tuleb üles seadistada kohalik host (local host) kasutad
 4) XAMPP - versioon 7.4.6
 5) SimpleSAMLphp - versioon 1.14.17
 6) phpMyAdmin - versioon 4.4.15.10
+
+## Andmebaasi loomine
+[Tabeli loomine](https://github.com/henrimag/projekt/blob/master/database/TimeSort_create.sql)
 
 ## Veebiserver / andmebaasi server informatsioon
 Andmebaasi server
@@ -72,3 +75,6 @@ Selleks, et uus leht menüüs nähtaval oleks, tuleb teha järgmist:
 
 ### css, js, pildid, funktsioonid
 css ja js failid tuleb vastavalt panna `style` ja `javascript` kaustadesse, pildid `images` kausta, funktsioonid `functions` kausta
+
+# Litesents
+[MIT litsents](LICENSE)

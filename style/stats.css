@@ -3,75 +3,24 @@ html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  /* background-image: url('../images/login_background.jpg'); */
+  background-image: url("../images/login_background.jpg");
 }
 
-.logInForm {
-  width: 320px;
-  height: 420px;
-  background: rgb(93, 236, 217, 0.2);
-  color: #fff;
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%,-50%);
-  box-sizing: border-box;
-  padding: 20px 30px;
-}
-
-.inputData label {
-  margin: 0;
-  padding: 0;
-  font-weight: bold;
-  color: black;
-}
-
-.inputData input {
-  width: 100%;
-  margin-bottom: 5px;
-}
-
-.logInForm input[type="button"]:hover {
-    cursor: pointer;
-    background: #1a6353;
-    /* color: #000;
-    border-style: solid; */
-}
-
-.inputData input[type="email"], input[type="password"] {
-    border: none;
-    border-bottom: 1.5px solid rgb(0, 126, 109);
-    background: transparent;
-    outline: none;
-    height: 25px;
-    color: rgb(124, 124, 124);
-    font-size: 16px;
-}
-
-.logInForm input[type="button"] {
-    border: none;
-    outline: none;
-    height: 35px;
-    background: #189e81;
-    color: rgb(0, 0, 0);
-    font-size: 18px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    width: 5cm;
-}
 
 h1 {
   margin: 0;
   padding: 0 0 20px;
   text-align: center;
   font-size: 22px;
-  color: black;
-  font-style: oblique;
-  font-size: xx-large;
+  color: rgb(255, 255, 255);
+  font-size: 2.5em;
+  font-family: "BlendaScript";
+  margin-bottom: 0.5cm;
+  margin-top: 0.5cm;
 }
 
 .menu {
-  background-color: gray;
+  background-color: rgb(61, 214, 189);
   font-size: 1.5em;
   text-align: center;
   align-items: center;
@@ -80,33 +29,48 @@ h1 {
   font-size: large;
   padding-top: 1em;
   padding-bottom: 1em;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-p { 
+p {
   text-align: center;
   padding-top: 2mm;
   color: black;
 }
 
-.logInForm a:hover {
-    color: #0c0542;
-}
-
 .menu p {
-  color: rgb(79, 173, 54);
-  font-size: 2em;
+  color: rgb(255, 255, 255);
+  font-size: 3em;
   margin: 0 0 1em 0;
+  font-family: "BlendaScript";
 }
 
-nav a {  
-  font-size: 1.5em;
-  color: whitesmoke;
+nav a:hover {
+  /* font-size: 1.5em; */
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  text-decoration: underline;
 }
-
+nav a,
 nav a:not(:first-child):before {
-  content: "|";
+  margin-right: 1mm;
+  border-radius: 0px;
+  /* border-style: solid; */
+  padding: 10px;
+  color: black;
+  font-family: "BlendaScript";
+  font-size: 1em;
+  text-decoration: none;
 }
 
-nav a, nav a:not(:first-child):before {
-  margin-right: 1em;
+.data-columns div {
+  display: inline-block;
+  background-color: red;
+  vertical-align: bottom;
+}
+
+@font-face {
+  font-family: "BlendaScript"; /*a name to be used later*/
+  src: url("../fonts/BlendaScript.ttf"); /*URL to font*/
 }

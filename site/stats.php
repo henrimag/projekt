@@ -1,47 +1,10 @@
 <?php require('../functions/page_loading.php');
 require('../config.php');
-require('../data.php');
 require('../functions/get_stats.php');
 display_student_menu(true);
 
-global $conn;
-global $subject_Names;
-$searchable = "";
+//$statsHTML = readAllStatsASC();
 
-switch($_POST['chooseSearchValue']){
-   
-    case 'Student_Entry_ID':
-        $searchable = 'Student_Entry_ID';
-        
-    break;
-
-    case 'Subject_Subject_ID':
-        $searchable = 'Subject_Subject_ID';
-    
-    break;
-
-    case 'Activity_Activity_ID':
-        $searchable = 'Activity_Activity_ID';
-   
-    break;
-
-    case 'Time_Spent':
-        $searchable = 'Time_Spent';
-      
-    break;
-    
-    case 'Timestamp':
-        $searchable = 'Timestamp';
-
-    break;
-    
-    default:
-        echo "Midagi pole valitud";
-        
-    }
-
-
-  
 ?>
 
 
@@ -52,44 +15,47 @@ switch($_POST['chooseSearchValue']){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script defer src="../javascript/stats.js"></script>
 </head>
-<h1>Esileht</h1>
+<h1>Statistika leht</h1>
+<body>
 <form action="search.php" method="POST">
-    <input name="search" type="text" id="searchInput" placeholder="Otsi tulemust..." title="Sisesta otsitav ülesanne" onclick="">
-    <button type="submit" name="submit-search">Otsi!</button>
+    <div class="search">
+    <input class="search searchInput" name="search" type="text" id="searchInput" placeholder="Otsi ülesannet..." title="Sisesta otsitav ülesanne" onclick="">
+    <button class="search submit-search" type="submit" name="submit-search">Otsi!</button>
+    </div>
 </form>
-<h2>Kõik artiklid:</h2>
-<form method="POST">
-    <select name="chooseSearchValue">
-        <option value="Student_Entry_ID">Järjekorra numbri järgi</option>
-        <option value="Subject_Subject_ID">Aine nimetuse järgi</option>
-        <option value="Activity_Activity_ID">Tegevuse järgi</option>
-        <option value="Time_Spent">Ajakulu järgi</option>
-        <option value="Timestamp">Kuupäeva ja kellaaja järgi</option>
-    </select>
-    <input name="ASC" class="ASC" id="ASC" type="submit" value="Tõusev">
-    <input name="DESC" class="DESC" id="DESC" type="submit" value="Kahanev">
-</form>
+
+</body>
+<button onclick="location.href = 'stats_table.php';" id="redirectButton" class="float-left submit-button" >Vaata tulemusi tabeli kujul</button>
+<h2>Kõik salvestused:</h2>
+
 
 <div class="article-container">
 
     <?php
-    echo "Valitud on: " . $searchable;
-    if (isset($_POST["DESC"])) {
+
+    echo readStatsOrderByDays();
+    /*
+    echo $statsHTML;
+
+    if (isset($_POST["DESC"]) && ($statsHTML = readAllStatsASC())) {
 
         echo $statsHTML = readAllStatsDESC();
     } else {
     }
 
 
-    if (isset($_POST["ASC"])) {
+    if (isset($_POST["ASC"]) && !($statsHTML = readAllStatsASC())) {
         echo $statsHTML = readAllStatsASC();
     } else {
     }
+
+    */
+
     ?>
 </div>
 
 <body>
-    
+
     <div id="statsHTML">
         <ul class="statsList">
             <?php
@@ -98,7 +64,10 @@ switch($_POST['chooseSearchValue']){
             ?>
         </ul>
     </div>
-
+    <form method="post">
+        <input name="ASC" class="ASC" id="ASC" type="submit" value="ASC">
+        <input name="DESC" class="DESC" id="DESC" type="submit" value="DESC">
+    </form>
     <!--<button value="fix" onclick="test()"></button>-->
 
 </body>

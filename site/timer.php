@@ -47,7 +47,7 @@ if (isset($_POST["submitTime"])) {
     $notice = saveResult($Activity_Activity_ID, $Time_Spent, $Timestamp, $Subject_Subject_ID);
     echo "Edukalt salvestatud";
 } else {
-    echo "Ei ole salvestatud ";
+    //echo "Ei ole salvestatud ";
 }
 
 
@@ -73,7 +73,7 @@ if (isset($_POST["submitTime"])) {
     <form id="submitForm" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <div class="chooseSubject">
 
-            <label class="subjectLabel" for='allSubjects'>Vali Õppeaine: </label><br>
+            <label class="subjectLabel" for='allSubjects'>Vali õppeaine </label><br>
             <select name="allSubjects">
                 <option value="1">Tarkvaraarenduse projekt</option>
                 <option value="2">Objektorienteeritud programmeerimine</option>
@@ -86,7 +86,7 @@ if (isset($_POST["submitTime"])) {
             <br>
             <span><?php echo $Time_Spent_Error . " " . $Activity_Activity_ID_Error . " " .  $Subject_Subject_ID_Error?></span>
             <br>
-            <label for='homework'>Vali Õpitegevus: </label><br>
+            <label for='homework'>Vali õpitegevus </label><br>
             <select name="homework">
                 <option value="9">Akadeemiline õppetöö</option>
                 <option value="10">Rühmatöö</option>

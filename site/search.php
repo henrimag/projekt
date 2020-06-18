@@ -9,7 +9,7 @@ display_student_menu(true);
 
 <head>
 
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/stats.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script defer src="../javascript/stats.js"></script>
@@ -37,7 +37,7 @@ display_student_menu(true);
         </div>";
             }
         } else {
-            echo "Otsingutulemusi ei leitud..";
+            echo " Otsingutulemusi ei leitud..";
         }
     }
 
