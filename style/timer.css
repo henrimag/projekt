@@ -168,6 +168,7 @@ nav a:hover {
   /* font-size: 1.5em; */
   color: rgb(0, 0, 0);
   background-color: rgb(254, 255, 255);
+  text-decoration: underline;
 }
 
 .menu p {
