@@ -32,7 +32,7 @@ function display_student_menu() {
     ['Avaleht', 'student.php' ],
     ['Logi sisse', 'logIn.php'],
     ['Salvesta aega', 'timer.php'],
-    ['Vaata statistikat', 'stats.php']
+    ['Vaata statistikat', 'stats_table.php']
   ];
   display_menu($pages);
 }

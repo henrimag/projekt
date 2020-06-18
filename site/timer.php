@@ -47,7 +47,7 @@ if (isset($_POST["submitTime"])) {
     $notice = saveResult($Activity_Activity_ID, $Time_Spent, $Timestamp, $Subject_Subject_ID);
     echo "Edukalt salvestatud";
 } else {
-    echo "Ei ole salvestatud ";
+    //echo "Ei ole salvestatud ";
 }
 
 

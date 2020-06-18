@@ -1,11 +1,76 @@
-/* .search [type="text"]{
-    border: none;
-    outline: none;
-    height: 35px;
-    background: #17b639;
-    color: rgb(0, 0, 0);
-    font-size: 18px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    width: 5cm;
-} */
+html {
+  background-color: lightgray;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url("../images/login_background.jpg");
+}
+
+
+h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+  color: rgb(255, 255, 255);
+  font-size: 2.5em;
+  font-family: "BlendaScript";
+  margin-bottom: 0.5cm;
+  margin-top: 0.5cm;
+}
+
+.menu {
+  background-color: rgb(61, 214, 189);
+  font-size: 1.5em;
+  text-align: center;
+  align-items: center;
+  font-style: monospace;
+  font-style: bold;
+  font-size: large;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+p {
+  text-align: center;
+  padding-top: 2mm;
+  color: black;
+}
+
+.menu p {
+  color: rgb(255, 255, 255);
+  font-size: 3em;
+  margin: 0 0 1em 0;
+  font-family: "BlendaScript";
+}
+
+nav a:hover {
+  /* font-size: 1.5em; */
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  text-decoration: underline;
+}
+nav a,
+nav a:not(:first-child):before {
+  margin-right: 1mm;
+  border-radius: 0px;
+  /* border-style: solid; */
+  padding: 10px;
+  color: black;
+  font-family: "BlendaScript";
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.data-columns div {
+  display: inline-block;
+  background-color: red;
+  vertical-align: bottom;
+}
+
+@font-face {
+  font-family: "BlendaScript"; /*a name to be used later*/
+  src: url("../fonts/BlendaScript.ttf"); /*URL to font*/
+}

@@ -1,17 +1,16 @@
 <?php require('../functions/page_loading.php');
 require('../config.php');
 require('../functions/get_stats.php');
-require('../style/stats.css');
 display_student_menu(true);
 
-$statsHTML = readAllStatsASC();
+//$statsHTML = readAllStatsASC();
 
 ?>
 
 
 <head>
 
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/stats.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script defer src="../javascript/stats.js"></script>
@@ -24,7 +23,9 @@ $statsHTML = readAllStatsASC();
     <button class="search submit-search" type="submit" name="submit-search">Otsi!</button>
     </div>
 </form>
+
 </body>
+<button onclick="location.href = 'stats_table.php';" id="redirectButton" class="float-left submit-button" >Vaata tulemusi tabeli kujul</button>
 <h2>Kõik salvestused:</h2>
 
 
