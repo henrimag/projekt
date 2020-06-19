@@ -23,20 +23,16 @@ function saveResult($Activity_Activity_ID, $Time_Spent, $Timestamp, $Subject_Sub
 }
 
 
-function changeResult($Time_Spent)
+function changeResult($newTime, $activeID)
 {
+	
 	$notice = null;
 	$conn = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
-	$stmt = $conn->prepare("UPDATE TABLE Student_Entry SET Time_Spent = $newTime");
-	echo $conn->error;
-	$stmt->bind_param("s", $Time_Spent);
-	if ($stmt->execute()) {
-		$notice = "Aeg muudetudud!";
-	} else {
-		$notice = "Aja muutmisel tekkis tehniline viga: " . $stmt->error;
+	$sql = "UPDATE Student_Entry SET Time_Spent = '" . $newTime . "' WHERE Student_Entry_ID = " . $activeID;
+
+	if ($conn->query($sql)) {
+	
 	}
 
-	$stmt->close();
-	$conn->close();
 	return $notice;
 }

@@ -13,6 +13,8 @@ $Activity_Activity_ID = null;
 $Time_Spent = null;
 $Activity_Activity_ID_Error = null;
 $Time_Spent_Error = null;
+$newTime = null;
+$activeID = null;
 
 
 //kui on salvestamise nuppu vajutatud
@@ -51,7 +53,18 @@ if (isset($_POST["submitTime"])) {
     //echo "Ei ole salvestatud ";
 }
 
+if (isset($_POST["changeTime"])) {
+    //ajakulu muutmine
+    if (isset($_POST["timeChoices"]) and !empty($_POST["timeChoices"]) and isset($_POST["activeID"]) and !empty($_POST["activeID"])) {
+        $newTime = $_POST["timeChoices"];
+        $activeID = $_POST["activeID"];
+     
+        $notice = changeResult($newTime, $activeID);
 
+    } else {
+      //  echo $Time_Spent_Error = "Ei saa salvestada null ajaga!";
+    }
+}
 ?>
 
 
@@ -111,7 +124,7 @@ if (isset($_POST["submitTime"])) {
             <div name="stopwatch" id="stopwatch" class="stopwatch">00:00:00 </div>
            
  
-            <input class="submitTime" name="submitTime" id="submitTime" type="submit" value="Salvesta tulemus" onclick= submit()><span id="notice"><?php echo $notice; ?></span>
+            <input class="submitTime" name="submitTime" id="submitTime" type="submit" value="Salvesta tulemus" onclick="submit()"><span id="notice"><?php echo $notice; ?></span>
             
 
             <input type="hidden" value="00:00:00" name="timeValue" class="timeValue" id="timeValue">
@@ -121,20 +134,20 @@ if (isset($_POST["submitTime"])) {
 
     </form>
   
-    <form action="">
-        <select id="changeTime" name="changeTime">
+    <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <select id="activeID" name="activeID">
         <?php 
         global $subject_Names;
         $conn = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
         $sql = mysqli_query($conn, "SELECT * FROM Student_Entry");
         while ($row = $sql->fetch_assoc()){
-        echo "<option value=\"myLastResults\">" . $row['Student_Entry_ID'] . " | " . $subject_Names[$row['Subject_Subject_ID']] . " | "  . $subject_Names[$row['Activity_Activity_ID']] . " | " . $row['Time_Spent'] . " | " . $row['Timestamp'] . "</option>";
+        echo "<option value=" .$row['Student_Entry_ID']. ">" . $row['Student_Entry_ID'] . " | " . $subject_Names[$row['Subject_Subject_ID']] . " | "  . $subject_Names[$row['Activity_Activity_ID']] . " | " . $row['Time_Spent'] . " | " . $row['Timestamp'] . "</option>";
         }
         ?>
         </select>
         <br>
      
-        <label id="timeChoices" for='timeChoices'>Vali õpitegevus </label><br>
+        <label id="timeChoices" for='timeChoices'>Vali aeg </label><br>
             <select name="timeChoices">
                 <option value="00:10:00">00:10:00</option>
                 <option value="00:20:00">00:20:00</option>
@@ -161,7 +174,7 @@ if (isset($_POST["submitTime"])) {
                 <option value="03:50:00">03:50:00</option>
                 <option value="04:00:00">04:00:00</option>
             </select>
-            <input class="changeTime" name="changeTime" id="changeTime" type="submit" value="Muuda aega" onclick= submit()><span id="notice"><?php echo $notice; ?></span>
+            <input class="changeTime" name="changeTime" id="changeTime" type="submit" value="Muuda aega" onclick="submit()"><span id="notice"><?php echo $notice; ?></span>
     </form>
 
 </body> 
