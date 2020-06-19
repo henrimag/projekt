@@ -4,14 +4,15 @@
 
 $Timestamp = date('Y-m-d H:i:s');
 
-function saveResult($Activity_Activity_ID, $Time_Spent, $Timestamp, $Subject_Subject_ID){
-    $notice = null;
-    $conn = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
-    $stmt = $conn->prepare("INSERT INTO Student_Entry (Activity_Activity_ID, Time_Spent, Timestamp, Subject_Subject_ID) VALUES (?,?,?,?)");
-    echo $conn->error;
-    $stmt->bind_param("issi", $Activity_Activity_ID, $Time_Spent, $Timestamp, $Subject_Subject_ID);
-    if ($stmt->execute()) {
-		$notice = "Aeg salvestatud!"; 
+function saveResult($Activity_Activity_ID, $Time_Spent, $Timestamp, $Subject_Subject_ID)
+{
+	$notice = null;
+	$conn = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
+	$stmt = $conn->prepare("INSERT INTO Student_Entry (Activity_Activity_ID, Time_Spent, Timestamp, Subject_Subject_ID) VALUES (?,?,?,?)");
+	echo $conn->error;
+	$stmt->bind_param("issi", $Activity_Activity_ID, $Time_Spent, $Timestamp, $Subject_Subject_ID);
+	if ($stmt->execute()) {
+		$notice = "Aeg salvestatud!";
 	} else {
 		$notice = "Aja salvestamisel tekkis tehniline viga: " . $stmt->error;
 	}
@@ -19,4 +20,23 @@ function saveResult($Activity_Activity_ID, $Time_Spent, $Timestamp, $Subject_Sub
 	$stmt->close();
 	$conn->close();
 	return $notice;
-} 
+}
+
+
+function changeResult($Time_Spent)
+{
+	$notice = null;
+	$conn = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
+	$stmt = $conn->prepare("UPDATE TABLE Student_Entry SET Time_Spent = $newTime");
+	echo $conn->error;
+	$stmt->bind_param("s", $Time_Spent);
+	if ($stmt->execute()) {
+		$notice = "Aeg muudetudud!";
+	} else {
+		$notice = "Aja muutmisel tekkis tehniline viga: " . $stmt->error;
+	}
+
+	$stmt->close();
+	$conn->close();
+	return $notice;
+}

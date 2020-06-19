@@ -20,6 +20,20 @@ body {
     font-weight: bold;
 }
 
+select{
+  align-items: center;
+  margin: 8px;
+  left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 0.2cm;
+  justify-content: space-evenly;
+  margin-left: 0.1mm;
+  background-color: rgb(255, 255, 255);
+  font-size: .4cm;
+  margin-left: 1cm;
+}
 
 
 input[type="button"],
@@ -207,4 +221,65 @@ nav a, nav a:not(:first-child):before {
   font-family: 'BlendaScript';
   font-size: 1cm;
 }
+
+input[type="button"],
+input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 35px;
+  background: #fffb17;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  margin-bottom: 10px;
+  width: 57mm;
+  cursor: pointer;
+  margin-left: 1cm;
+}
+
+input[type="submit"]:hover {
+  border: none;
+  outline: none;
+  height: 35px;
+  background: rgb(224, 224, 224);
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  margin-left: 1cm;
+  border: solid;
+}
+
+button{
+  border: none;
+  outline: none;
+  height: 35px;
+  background: rgb(61, 214, 189);
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  margin-bottom: 10px;
+  width: 5cm;
+  cursor: pointer;
+  margin-left: 1cm;
+}
+
+button:hover{
+  border: none;
+  outline: none;
+  height: 35px;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  margin-left: 1cm;
+  border: solid;
+}
+#timeChoices{
+  margin-left: 1cm;
+}
+
+
+
+
+
 

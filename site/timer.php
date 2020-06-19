@@ -1,6 +1,7 @@
 <?php require('../functions/page_loading.php');
 require('../functions/student_entry.php');
 require('../config.php');
+require('../data.php');
 display_student_menu(true);
 
 $database = "if19_TimeSort"; 
@@ -111,12 +112,58 @@ if (isset($_POST["submitTime"])) {
            
  
             <input class="submitTime" name="submitTime" id="submitTime" type="submit" value="Salvesta tulemus" onclick= submit()><span id="notice"><?php echo $notice; ?></span>
+            
 
             <input type="hidden" value="00:00:00" name="timeValue" class="timeValue" id="timeValue">
 
         </div>
+        
 
     </form>
+  
+    <form action="">
+        <select id="changeTime" name="changeTime">
+        <?php 
+        global $subject_Names;
+        $conn = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
+        $sql = mysqli_query($conn, "SELECT * FROM Student_Entry");
+        while ($row = $sql->fetch_assoc()){
+        echo "<option value=\"myLastResults\">" . $row['Student_Entry_ID'] . " | " . $subject_Names[$row['Subject_Subject_ID']] . " | "  . $subject_Names[$row['Activity_Activity_ID']] . " | " . $row['Time_Spent'] . " | " . $row['Timestamp'] . "</option>";
+        }
+        ?>
+        </select>
+        <br>
+     
+        <label id="timeChoices" for='timeChoices'>Vali õpitegevus </label><br>
+            <select name="timeChoices">
+                <option value="00:10:00">00:10:00</option>
+                <option value="00:20:00">00:20:00</option>
+                <option value="00:30:00">00:30:00</option>
+                <option value="00:40:00">00:40:00</option>
+                <option value="00:50:00">00:50:00</option>
+                <option value="01:00:00">01:00:00</option>
+                <option value="01:10:00">01:10:00</option>
+                <option value="01:20:00">01:20:00</option>
+                <option value="01:30:00">01:30:00</option>
+                <option value="01:40:00">01:40:00</option>
+                <option value="01:50:00">01:50:00</option>
+                <option value="02:00:00">02:00:00</option>
+                <option value="02:10:00">02:10:00</option>
+                <option value="02:20:00">02:20:00</option>
+                <option value="02:30:00">02:30:00</option>
+                <option value="02:40:00">02:40:00</option>
+                <option value="02:50:00">02:50:00</option>
+                <option value="03:10:00">03:10:00</option>
+                <option value="03:20:00">03:20:00</option>
+                <option value="03:00:00">03:30:00</option>
+                <option value="03:30:00">03:30:00</option>
+                <option value="03:40:00">03:40:00</option>
+                <option value="03:50:00">03:50:00</option>
+                <option value="04:00:00">04:00:00</option>
+            </select>
+            <input class="changeTime" name="changeTime" id="changeTime" type="submit" value="Muuda aega" onclick= submit()><span id="notice"><?php echo $notice; ?></span>
+    </form>
+
 </body> 
 
 </html>

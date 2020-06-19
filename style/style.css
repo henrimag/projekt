@@ -149,3 +149,7 @@ nav a, nav a:not(:first-child):before {
   font-family: 'BlendaScript'; /*a name to be used later*/
   src: url('../fonts/BlendaScript.ttf'); /*URL to font*/
 }
+
+#changeTime{
+  width: 10%;
+}

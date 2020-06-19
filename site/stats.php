@@ -15,7 +15,7 @@ display_student_menu(true);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script defer src="../javascript/stats.js"></script>
 </head>
-<h1>Statistika leht</h1>
+<h1>Statistika joonisel</h1>
 <body>
 <form action="search.php" method="POST">
     <div class="search">
@@ -26,7 +26,7 @@ display_student_menu(true);
 
 </body>
 <button onclick="location.href = 'stats_table.php';" id="redirectButton" class="float-left submit-button" >Tulemused tabelil</button>
-<h2>Kõik salvestused:</h2>
+<h2>Kõik salvestused</h2>
 
 
 <div class="article-container">
@@ -56,17 +56,9 @@ display_student_menu(true);
 
 <body>
 
-    <div id="statsHTML">
-        <ul class="statsList">
-            <?php
-
-
-            ?>
-        </ul>
-    </div>
     <form method="post">
-        <input name="ASC" class="ASC" id="ASC" type="submit" value="ASC">
-        <input name="DESC" class="DESC" id="DESC" type="submit" value="DESC">
+        <!-- <input name="ASC" class="ASC" id="ASC" type="submit" value="ASC">
+        <input name="DESC" class="DESC" id="DESC" type="submit" value="DESC"> -->
     </form>
     <!--<button value="fix" onclick="test()"></button>-->
 
