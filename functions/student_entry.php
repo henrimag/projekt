@@ -31,7 +31,10 @@ function changeResult($newTime, $activeID)
 	$sql = "UPDATE Student_Entry SET Time_Spent = '" . $newTime . "' WHERE Student_Entry_ID = " . $activeID;
 
 	if ($conn->query($sql)) {
-	
+		$notice = "Aeg salvestatud!";
+	}
+	else {
+		$notice = "Aega ei saanud mõjutada..";
 	}
 
 	return $notice;

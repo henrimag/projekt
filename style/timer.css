@@ -9,8 +9,7 @@ html {
 body {
   height: 100%;
   margin: 0;
-  overflow: hidden;
-  position: absolute;
+  position: relative;
   width: 100%;
 }
 
@@ -55,14 +54,22 @@ input[type="submit"] {
 }
   
 .timerDiv{
-    background-color: rgb(31, 148, 216);
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 2000vh;
     justify-content: center;
-    background-image: url('../images/sea_picture.jpg');
     height: 400px;
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+}
+
+#imageDiv {
+  
+  background-color: rgb(31, 148, 216);
+  background-image: url('../images/sea_picture.jpg');
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
 }
 
 .chooseSubject{
@@ -82,6 +89,9 @@ input[type="submit"] {
   margin-top: 3mm;
   text-align: left;
   font-weight: bold;
+  color: white;
+  font-size: 36px;
+
 
 }
 .chooseSubject select{
@@ -110,6 +120,7 @@ input[type="submit"] {
   font-size: 18px;
   border-radius: 20px;
   margin-bottom: 10px;
+  margin-top: 10px;
   width: 5cm;
 }
 
@@ -275,10 +286,21 @@ button:hover{
   border: solid;
 }
 #timeChoices{
-  margin-left: 1cm;
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
 }
 
+#activeIDLabel{
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+}
 
+form {
+  text-align: center;
+  margin: 0 0 0 0;
+}
 
 
 

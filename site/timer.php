@@ -7,6 +7,7 @@ display_student_menu(true);
 $database = "if19_TimeSort"; 
 $Timestamp = date('Y-m-d H:i:s');
 $notice = null;
+$notice2 = null;
 $Subject_Subject_ID = null;
 $Subject_Subject_ID_Error = null;
 $Activity_Activity_ID = null;
@@ -46,9 +47,9 @@ if (isset($_POST["submitTime"])) {
     } else {
         echo $Time_Spent_Error = "Ei saa salvestada null ajaga!";
     }
-    echo $Activity_Activity_ID . ";" . $Time_Spent .";" . $Timestamp . ";" . $Subject_Subject_ID . ";";
+    //echo $Activity_Activity_ID . ";" . $Time_Spent .";" . $Timestamp . ";" . $Subject_Subject_ID . ";";
     $notice = saveResult($Activity_Activity_ID, $Time_Spent, $Timestamp, $Subject_Subject_ID);
-    echo "Edukalt salvestatud";
+    //echo "Edukalt salvestatud";
 } else {
     //echo "Ei ole salvestatud ";
 }
@@ -59,7 +60,7 @@ if (isset($_POST["changeTime"])) {
         $newTime = $_POST["timeChoices"];
         $activeID = $_POST["activeID"];
      
-        $notice = changeResult($newTime, $activeID);
+        $notice2 = changeResult($newTime, $activeID);
 
     } else {
       //  echo $Time_Spent_Error = "Ei saa salvestada null ajaga!";
@@ -84,6 +85,7 @@ if (isset($_POST["changeTime"])) {
 </head>
 
 <body>
+    <div id="imageDiv">
     <form id="submitForm" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <div class="chooseSubject">
 
@@ -133,18 +135,20 @@ if (isset($_POST["changeTime"])) {
         
 
     </form>
-  
     <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+  <div class=timerDiv>
+  <label id="activeIDLabel" for="activeID">Siin saad muuta eelnevaid aegu</label>
         <select id="activeID" name="activeID">
         <?php 
         global $subject_Names;
         $conn = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
-        $sql = mysqli_query($conn, "SELECT * FROM Student_Entry");
+        $sql = mysqli_query($conn, "SELECT * FROM Student_Entry WHERE Timestamp >= now() - interval 3 day");
         while ($row = $sql->fetch_assoc()){
         echo "<option value=" .$row['Student_Entry_ID']. ">" . $row['Student_Entry_ID'] . " | " . $subject_Names[$row['Subject_Subject_ID']] . " | "  . $subject_Names[$row['Activity_Activity_ID']] . " | " . $row['Time_Spent'] . " | " . $row['Timestamp'] . "</option>";
         }
         ?>
         </select>
+      
         <br>
      
         <label id="timeChoices" for='timeChoices'>Vali aeg </label><br>
@@ -174,9 +178,10 @@ if (isset($_POST["changeTime"])) {
                 <option value="03:50:00">03:50:00</option>
                 <option value="04:00:00">04:00:00</option>
             </select>
-            <input class="changeTime" name="changeTime" id="changeTime" type="submit" value="Muuda aega" onclick="submit()"><span id="notice"><?php echo $notice; ?></span>
+            <input class="changeTime" name="changeTime" id="changeTime" type="submit" value="Muuda aega" onclick="submit()"><span id="notice"><?php echo $notice2; ?></span>
+   </div>
     </form>
-
+    </div>
 </body> 
 
 </html>
